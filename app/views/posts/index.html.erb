@@ -1,0 +1,18 @@
+<h1>Posts#index</h1>
+<h1>Listing Posts</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ <% @posts.each do |p| %>
+    <tr>
+      <td><%= p.title %></td>
+      <td><%= p.body %></td>
+    </tr>
+  <% end %>
+  
+</table>
+
+<h2> <%= link_to 'New', new_post_path %> </h2>
