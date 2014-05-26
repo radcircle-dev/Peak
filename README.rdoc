@@ -28,3 +28,11 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+######   NOTES   ######
+
+5/25/14 - AUSTIN
+	-Installed devise- have not done anything with it yet
+	-Created a basic blogging system
+		- only create, read, seee all posts
+		- take a look at the model to see all the parts, for simplicity and quick testing, I did not deal with all parts of the form.
