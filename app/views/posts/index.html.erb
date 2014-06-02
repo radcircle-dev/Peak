@@ -10,9 +10,12 @@
     <tr>
       <td><%= p.title %></td>
       <td><%= p.body %></td>
+      <td><%= link_to 'Show', post_path(p) %> </td>
+      <td><%= link_to 'Edit', edit_post_path(p) %> </td>
     </tr>
   <% end %>
   
 </table>
 
 <h2> <%= link_to 'New', new_post_path %> </h2>
+<!-- this is a comment -->
