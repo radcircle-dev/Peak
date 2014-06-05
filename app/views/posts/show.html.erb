@@ -1,14 +1,23 @@
 <h1>Posts#show</h1>
+
+
 <p>
-	Form: <%= @post.form %>
-</p>
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
+  <strong><%= @post.title %></strong>
+  
 </p>
  
 <p>
-  <strong>Text:</strong>
+  <%= @post.subtitle %> 
+
+<p>
+  <%=@post.artist%> - "<%=@post.song%>"
+</p>
+
+<p>
   <%= @post.body %>
 </p>
+
+
+
+
 <h2> <%= link_to 'Home', posts_path %> </h2>

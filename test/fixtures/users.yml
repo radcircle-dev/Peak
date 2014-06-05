@@ -4,7 +4,7 @@ one:
   prname: Austin
   created_at: 2014-06-05 09:46:14
   email: austin@radcircle.com
-  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  encrypted_password: password
 
 two:
   prname: MyString
