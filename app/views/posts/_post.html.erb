@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Title</th>
+   
+  </tr>
+ <% @posts.each do |p| %>
+    <tr>
+      
+      <td><%= link_to p, post_path(p) %> </td>
+      <td><%= link_to "Edit", edit_post_path(p) %> </td>
+    </tr>
+  <% end %>
+  
+</table>
