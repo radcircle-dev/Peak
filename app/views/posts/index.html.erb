@@ -3,8 +3,10 @@
  
 <%= render partial: "post" %>
 
+<% if user_signed_in? %>
 <span class="new-post">
 <%= link_to 'Create', new_post_path %>
 </span>
+<%end%>
 
 <!-- this is a comment -->
