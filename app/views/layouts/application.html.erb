@@ -7,8 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<section id = "main">
+<% [:notice, :alert].each do |level| %>
+	<% if flash[level] %>
+		<div class = "flash <%= level%>"><%= flash[level] %> </div>
+	<%end%>
+<%end%>
 <%= yield %>
-
+<%= user_logged_in_msg %>
+</section>
 </body>
 </html>
