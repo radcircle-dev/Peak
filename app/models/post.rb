@@ -4,7 +4,7 @@ class Post < ActiveRecord::Base
     
     has_many :terms
     has_many :categories, :through => :terms
-    
+    belongs_to :user
 	def to_s
 		"#{title}"
 	end
