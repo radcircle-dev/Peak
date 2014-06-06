@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   devise_for :admins
   resources :welcome
   resources :posts
+  resources :users
   root "posts#index"
   #this is a change
   # The priority is based upon order of creation: first created -> highest priority.
