@@ -1,0 +1,12 @@
+<%= form_for :user, url: user_path(@user), method: :patch do |f| %>
+	
+	
+	<p>
+		Change Your Profile name<br>
+		<%= f.text_field :prname %>
+	</p>
+	
+	<h1> HIT ENTER WHEN FINISHED WITH ALL EDITS </h1>
+<%end%>
+	
+<%= link_to 'Back', post_path%>

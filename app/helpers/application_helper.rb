@@ -10,4 +10,8 @@ module ApplicationHelper
 		str += '</div>'
 		raw(str)
 	end
+
+	def admin_logged_in_msg
+		
+	end
 end

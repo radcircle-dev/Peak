@@ -21,6 +21,15 @@
   <%= @post.body %>
 </p>
 
+<section class = "comments">
+	<h2 id = "commentlabel"> Comments (<span id = "num_comments"> <%= @post.comments.size %> </span>)</h2>
+	<%if user_signed_in? %>
+		<%= render 'comments/form'%>
+	    <%else %>
+		<p><em> you must <%= link_to 'login', new_user_session_path %> to post comments </em></p>
+	<%end%>
+	<%= render partial: 'comments/comment', collection: @post.comments.order('created_at desc') %>
+</section>
 
 
 
