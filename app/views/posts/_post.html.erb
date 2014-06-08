@@ -7,7 +7,7 @@
     <tr>
       
       <td><%= link_to p, post_path(p) %> </td>
-       <% if user_signed_in? %>;
+       <% if admin_signed_in? %>;
       <td><%= link_to "Edit", edit_post_path(p) %> </td>
       
       	<td><%= link_to 'Destroy', post_path(p), method: :delete, data: { confirm: 'Are you sure?' }%> </td>

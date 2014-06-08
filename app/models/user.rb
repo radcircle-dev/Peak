@@ -5,9 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
     has_many :posts
-    
+    has_many :comments
 
     def to_s
-    	prname
+    	"#{prname}"
     end
 end
