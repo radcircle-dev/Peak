@@ -41,6 +41,18 @@ Please feel free to use a different markup language if you do not plan to run
 6/2/14
 	-added Show and edit functionality on Posts
 	
+6/8/2014
+	-returned to commit a somewhat working user class:
+		-built on devise User, has ability to create posts. The user is prompted at sign up to provide an email, prname ("profile name"), and password. All posts made by said will be automatically attributed to said user.
+	-Built a comment system, again utilizing the devise user system:
+		-allow for general comments to be amde on a post, which belongs to said post.
+		-The comments are not being saved, however, more work is necessary to bring this up and running.
+	-Installed an Admin account => not much has been done
+		-need to better define the roles and differences between users, authors (i imagine this will be some simple extension of users), and then admins
+		-need a signout button
+	NOTES:
+		There is of course much left to do, but the basics of the blog system is about complete. Need to discuss further the roles of accounts and get a clear understanding of what functionality we want to provide on each level (including a visitor with no account).
+
 =======
 
 6/2/14 - mo [testing branch]
