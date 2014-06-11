@@ -3,9 +3,9 @@
 /* index page */
 
 /* ideally we should see the navigation bar, coalescing of different kinds of posts, sign up, log in, etc etc .. */
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,900);
 
-
-$stdfont: Helvetica 'Neue', Helvetica, Arial, sans-serif;
+$stdfont: 'Roboto', Helvetica 'Neue', Helvetica, Arial, sans-serif;
 
 /* flash notices */
 
@@ -42,6 +42,62 @@ $stdfont: Helvetica 'Neue', Helvetica, Arial, sans-serif;
 .create-new-post {
 
 }
+
+/* SHOW => POST PAGE SCSS */
+
+.post-songtitle-songartist span {
+	font-family: $stdfont;
+	font-weight: 100;
+	background-color: #333;
+	color: #fff;
+	font-size: 2rem;
+	margin: 1rem 0 1rem 0;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	padding: 0.5rem;
+}
+
+.post-title {
+	font-family: $stdfont;
+	font-weight: 900;
+	font-size: 8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+	margin: 2rem 0 2rem 0;
+	text-rendering: optimizeLegibility;
+text-rendering: geometricPrecision;
+}
+
+
+.post-author {
+	@extend .post-title;
+	font-weight: 300;
+	font-size: 2rem;
+	margin: 1rem 0 1rem 0;
+}
+
+
+.post-subtitle {
+	@extend .post-title;
+	font-weight: 100;
+	font-size: 4rem;
+	margin: 2rem 0 2rem 0;
+	color: #999;
+}
+
+.post-body p {
+	font-family: $stdfont;
+	font-weight: 300;
+	font-size: 2.1rem;
+	word-spacing: 0.21rem;
+	color: #222;
+	text-rendering: optimizeLegibility;
+text-rendering: geometricPrecision;
+
+}
+/* */
 
 textarea:focus, input:focus{
     outline: 0;

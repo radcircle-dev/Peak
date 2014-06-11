@@ -1,26 +1,47 @@
-<h1>Posts#show</h1>
+	<div class="row">
+		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- left side -->
+			<div class="col-xs-12 col-md-6 post-songtitle-songartist">
+				<span><%=@post.artist%></span> <span>-</span> <span>"<%=@post.song%>"</span>
+			</div>
+		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- right side -->
+	</div>	
 
 
-<p>
-  <strong><%= @post.title %></strong>
-  
-</p>
+	<div class="row">
+		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- left side -->
+			<div class="col-xs-12 col-md-8 post-title">
+				<%= @post.title %>
+			</div>
+		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- right side -->
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- left side -->
+			<div class="col-xs-12 col-md-6 post-author">
+				<%= author_(@post) %>
+			</div>
+		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- right side -->
+	</div>
  
-<p>
-	<%= author_(@post) %>
-</p>
+ 	<div class="row">
+		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- left side -->
+			<div class="col-xs-12 col-md-8 post-subtitle">
+				<%= @post.subtitle %> 
+			</div>
+		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- right side -->
+	</div>
 
-<p>
-  <%= @post.subtitle %> 
+ 	<div class="row">
+		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- left side -->
+			<div class="col-xs-12 col-md-6 post-body">
+				<p><%= @post.body %></p>
+			</div>
+		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- right side -->
+	</div>
 
-<p>
-  <%=@post.artist%> - "<%=@post.song%>"
-</p>
-
-<p>
-  <%= @post.body %>
-</p>
-
+<div class="row">
+<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- left side -->
+			<div class="col-xs-12 col-md-8 post-subtitle">
 
 <section class = "comments">
 	<h2 id = "commentlabel"> Comments (<span id = "num_comments"> <%= @post.comments.size %> </span>)</h2>
@@ -32,6 +53,7 @@
 	<%= render partial: 'comments/comment', collection: @post.comments.order('created_at desc') %>
 </section>
 
-
+</div>
+</div>
 
 <h2> <%= link_to 'Home', posts_path %> </h2>
