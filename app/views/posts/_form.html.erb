@@ -9,11 +9,14 @@
     </div>
     <div class="col-xs-12 col-md-1"></div> <!-- right side -->
 
-
+   <div class="col-xs-12 col-md-1"></div> <!-- left side -->
+    <div class="col-xs-12 col-md-10 post-title-field"> 
     <p>
       <%= f.label :subtitle %><br>
-      <%= f.text_field :subtitle %>
+      <%= f.text_field :subtitle, placeholder: 'Editorialized Subtitle goes here' %>
     </p>
+      </div>
+    <div class="col-xs-12 col-md-1"></div> <!-- right side -->
  
     <p>
       <%= f.label :body %><br>
