@@ -2,39 +2,17 @@
 
 
 
-<div class="row">
-      <div class="col-xs-12 col-md-12">
 
 <%= form_for :post, url: posts_path do |f| %>
-  <div class="col-xs-12 col-md-12"><p>
-   
-  </p></div>
-  
 
 
 
-
-  <div class="col-xs-12 col-md-1"></div>
-    <div class="col-xs-12 col-md-10 post-title-area"><p>
-      <%= f.label :body %><br>
-      <%= f.text_area :body, placeholder: 'Write something awesome.' %>
-    </p></div>
-  <div class="col-xs-12 col-md-1"></div>
-  
-    <div class="col-xs-12 col-md-10"><p>
-      <%= f.submit %>
-    </p></div>
 
   
 <% end %>
-<div class="col-xs-12 col-md-12">
-<h2> 
-<%= link_to 'Home', posts_path %> 
-</h2>
-</div>
 
-    </div>
-  </div>
+
+
 =======
 <%= render partial: 'form' %>
 <h2> <%= link_to 'Home', posts_path %> </h2>
