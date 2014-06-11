@@ -1,6 +1,6 @@
 <div class = "comment">
-<h3> <%= comment.created_at.strftime('%m/%d/%%Y %I:%M %p') %>
-	<%= comment.user %>: </h3>
-	<%= raw(comment.content) %>
-	</div>
+    <%= comment.user %>: 
+	<%= raw(comment.content) %> (<%= comment.created_at.strftime('%m/%d/%Y') %>)
+
+</div>
 	

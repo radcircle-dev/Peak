@@ -1,6 +1,6 @@
-<h3> Post a Comment</h3>
+<h3>Post a Comment</h3>
 <%= form_for(@comment, remote:true) do |f| %>
 	<%= f.hidden_field :post_id %>
 	<%= f.text_area :content, size: "40x6" %>
-	<br> <%= submit_tag 'Add' %>
-	<%end%>
+	<br><%= submit_tag 'Add' %>
+<% end %>
