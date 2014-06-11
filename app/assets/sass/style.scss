@@ -43,11 +43,33 @@ $stdfont: Helvetica 'Neue', Helvetica, Arial, sans-serif;
 
 }
 
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+.form-field {
+	margin-top: 1rem;
+}
+
+	.form-field label {
+		font-family: $stdfont;
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		font-weight: 100;
+		background-color: #666;
+		color: #fff;
+		padding: 5px;
+		letter-spacing: 0.15rem;
+	}
 
 .post-title-field input {
 	width: 100%;
 	border: none;
-	border-bottom: 5px solid #333;
+	border-bottom: 1px solid #333;
+	font-family: $stdfont;
+	font-size: 4rem;
+	font-weight: 900;
+	text-transform: uppercase;
 }
 
 .post-title-area textarea {
@@ -57,3 +79,38 @@ $stdfont: Helvetica 'Neue', Helvetica, Arial, sans-serif;
 	font-size: 2rem;
 	font-weight: bold;
 }
+
+.rad-textarea textarea {
+	margin: 1rem 0 1rem 0;
+	width: 100%;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-image: url(bg.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+.submit-post-button input {
+	display: inline-block;
+	background-color: #f65d5d;
+	color: #333;
+	padding: 0.5rem;
+	font-family: $stdfont;
+	font-weight: 100;
+	letter-spacing: 0.35rem;
+	font-size: 3.5rem;
+	border: none;
+	text-transform: uppercase;
+	float: right;
+	margin-top: 1rem 0 1rem 0;
+	transition: .25s all;
+
+}
+
+	.submit-post-button input:hover {
+		background-color: #ccc;
+		color: #333;
+		transition: .25s all;
+	}
