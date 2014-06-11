@@ -1,46 +1,82 @@
 <%= form_for @post do |f| %>
   
-   <div class="col-xs-12 col-md-1"></div> <!-- left side -->
-    <div class="col-xs-12 col-md-10 post-title-field"> 
+  <div class="row">
+   <div class="col-xs-12 col-md-1 hidden-xs"></div> <!-- left side -->
+    <div class="col-xs-12 col-md-10 post-title-field form-field"> 
     <p>
       <%= f.label :title %><br>
       <%= f.text_field :title, placeholder: 'Insert awesome and interesting title here' %>
     </p>
     </div>
-    <div class="col-xs-12 col-md-1"></div> <!-- right side -->
+    <div class="col-xs-12 col-md-1 hidden-xs"></div> <!-- right side -->
+  </div>
 
-   <div class="col-xs-12 col-md-1"></div> <!-- left side -->
-    <div class="col-xs-12 col-md-10 post-title-field"> 
+  <div class="row">
+   <div class="col-xs-12 col-md-1 hidden-xs"></div> <!-- left side -->
+    <div class="col-xs-12 col-md-10 post-title-field form-field"> 
     <p>
       <%= f.label :subtitle %><br>
       <%= f.text_field :subtitle, placeholder: 'Editorialized Subtitle goes here' %>
     </p>
       </div>
-    <div class="col-xs-12 col-md-1"></div> <!-- right side -->
+    <div class="col-xs-12 col-md-1 hidden-xs"></div> <!-- right side -->
+    </div>
  
+
+   <div class="row">
+   <div class="col-xs-12 col-md-1 hidden-xs"></div> <!-- left side -->
+    <div class="col-xs-12 col-md-10 rad-textarea form-field"> 
     <p>
       <%= f.label :body %><br>
       <%= f.text_area :body %>
     </p>
+      </div>
+    <div class="col-xs-12 col-md-1 hidden-xs"></div> <!-- right side -->
+    </div>
 
+   <div class="row">
+   <div class="col-xs-12 col-md-1"></div> <!-- left side -->
+    <div class="col-xs-12 col-md-10 post-title-field form-field"> 
     <p>
       <%= f.label :link %><br>
-      <%= f.text_field :link %>
+      <%= f.text_field :link, placeholder: 'Soundcloud link here' %>
     </p>
- 
+     </div>
+    <div class="col-xs-12 col-md-1"></div> <!-- right side -->
+    </div>
+
+    <div class="row">
+    <div class="col-xs-12 col-md-1"></div> <!-- left side -->
+      <div class="col-xs-12 col-md-10 post-title-field form-field"> 
     <p>
       <%= f.label :artist %><br>
-      <%= f.text_field :artist %>
+      <%= f.text_field :artist, placeholder: 'Artist name goes here'  %>
     </p>
+       </div>
+    <div class="col-xs-12 col-md-1"></div> <!-- right side -->
+  </div>
 
+  <div class="row">
+    <div class="col-xs-12 col-md-1"></div> <!-- left side -->
+      <div class="col-xs-12 col-md-10 post-title-field form-field"> 
    <p>
       <%= f.label :song %><br>
-      <%= f.text_field :song %>
+      <%= f.text_field :song, placeholder: 'song field?'  %>
     </p>
+       </div>
+    <div class="col-xs-12 col-md-1"></div> <!-- right side -->
+    </div>
 
+    <div class="row">
+    <div class="col-xs-12 col-md-1"></div> <!-- left side -->
+      <div class="col-xs-12 col-md-10 submit-post-button"> 
     <p>
       <%= f.submit %>
     </p>
+       </div>
+    <div class="col-xs-12 col-md-1"></div> <!-- right side -->
+    </div>
 
-  
+
+
 <% end %>
