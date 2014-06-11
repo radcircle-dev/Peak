@@ -86,8 +86,10 @@ textarea:focus, input:focus{
 	height: 120px;
 	border: 3px solid #cccccc;
 	padding: 5px;
-	font-family: Tahoma, sans-serif;
-	background-image: url(bg.gif);
+	font-family: $stdfont;
+	font-size: 1.6rem;
+	word-spacing: 0.16rem;
+	background-image: url(http://i.imgur.com/RcrYiFC.png);
 	background-position: bottom right;
 	background-repeat: no-repeat;
 }
