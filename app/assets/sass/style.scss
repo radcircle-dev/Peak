@@ -3,9 +3,40 @@
 /* index page */
 
 /* ideally we should see the navigation bar, coalescing of different kinds of posts, sign up, log in, etc etc .. */
+
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,300,900);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 $stdfont: 'Roboto', Helvetica 'Neue', Helvetica, Arial, sans-serif;
+$stdmont: 'Montserrat', Helvetica 'Neue', Helvetica, Arial, sans-serif;
+
+html, body {
+    height: 100%;
+}
+
+.fill { 
+    min-height: 100%;
+    height: 100%;
+}
+
+.engineering-header {
+	background: url('http://i.imgur.com/ZFo0eXT.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+    height: 600px;
+}
+
+.engineering-header h1 {
+	background-color: #fff;
+	display: inline-block;
+	margin-top: 300px;
+
+}
+
+
 
 /* flash notices */
 
@@ -98,6 +129,90 @@ $stdfont: 'Roboto', Helvetica 'Neue', Helvetica, Arial, sans-serif;
 
 }
 /* */
+
+
+
+/* LOGIN PAGE SCSS */
+
+.login-page {
+	margin-top: 5rem;
+} 
+
+.login-page-logo-area {
+	text-align: center;
+	margin-top: 5rem;
+}
+
+.login-page input {
+width: 100%;
+	border: none;
+	border-bottom: 1px solid #333;
+	font-family: $stdfont;
+	font-size: 4rem;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+	.login-page input {
+		margin-top: 2.5rem;
+	}
+
+	.login-page label {
+		background-color: #ecf0f1;
+		color: #222;
+		font-size: 2rem;
+		letter-spacing: 0.4rem;
+		text-transform: uppercase;
+		padding: 1rem;
+		font-weight: 100;
+	}
+
+	.login-page-button input {
+		display: inline-block;
+		border-radius: 10px;
+		background-color: #ecf0f1;
+		font-family: $stdmont;
+		border: none;
+		text-rendering: optimizeLegibility;
+		letter-spacing: 0.3rem;
+		font-size: 3rem;
+		font-weight: 400;
+		padding: 1.5rem;
+		text-transform: uppercase;
+		color: #333;
+		text-align: center;
+		transition: 0.25s all;
+	}
+		.login-page-button input:hover {
+			background-color: #333;
+			color: #ecf0f1;
+			transition: 0.25s all;
+		}
+	
+	.login-page-button {
+		margin: 2.5rem 0 2.5rem 0;
+		text-align: center;
+
+	}
+
+
+/* END LOGIN PAGE SCSS */
+
+
+/* DEVISE LINKS SCSS */
+
+.devise-links {
+	font-family: $stdmont;
+	font-weight: 400;
+	font-size: 2rem;
+	color: #333;
+	display: inline-block;
+	text-align: center;
+}
+
+/* */
+
+
 
 textarea:focus, input:focus{
     outline: 0;

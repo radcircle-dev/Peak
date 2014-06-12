@@ -1,12 +1,30 @@
-<h1>Posts#index</h1>
-<h1>Listing Posts</h1>
+ 	<div class="row engineering-header fill">
+			<div class="col-xs-12 col-md-12 engineering-header fill">
+				<h1>Welcome to Radcircle's Engineering Blog!</h1>
+			</div>
+	</div>
  
-<%= render partial: "post" %>
+ 	<div class="row">
+		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- left side -->
+			<div class="col-xs-12 col-md-8">
+				<%= render partial: "post" %>
+			</div>
+		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- right side -->
+	</div>
 
-<% if user_signed_in? %>
-<span class="new-post">
-<%= link_to 'Create', new_post_path %>
-</span>
-<%end%>
+
+
+	<div class="row">
+		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- left side -->
+			<div class="col-xs-12 col-md-8">
+				<% if user_signed_in? %>
+					<span class="new-post">
+					<%= link_to 'Create', new_post_path %>
+					</span>
+				<%end%>
+			</div>
+		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- right side -->
+	</div>
+
 
 <!-- this is a comment -->
