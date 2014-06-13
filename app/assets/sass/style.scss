@@ -144,13 +144,13 @@ html, body {
 }
 
 .login-page input {
-width: 100%;
+	width: 100%;
 	border: none;
 	border-bottom: 1px solid #333;
 	font-family: $stdfont;
 	font-size: 4rem;
 	font-weight: 900;
-	text-transform: uppercase;
+
 }
 
 	.login-page input {
@@ -178,7 +178,6 @@ width: 100%;
 		font-size: 3rem;
 		font-weight: 400;
 		padding: 1.5rem;
-		text-transform: uppercase;
 		color: #333;
 		text-align: center;
 		transition: 0.25s all;
