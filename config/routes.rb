@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :welcome
   resources :posts
   resources :comments
+  resources :categories
 
   root "posts#index"
   #this is a change

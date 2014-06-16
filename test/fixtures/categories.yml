@@ -1,7 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
+  id: 1
+  title: 'Electronic'
 
 two:
-  title: MyString
+  id: 2
+  title: 'Rock'
+
+three:
+  id: 3
+  title: 'Alternative'
+
+four:
+  id: 4
+  title: 'Country'
+
+five:
+  id: 5
+  title: 'Pop'
+
+six:
+  id: 6
+  title: 'Rap'
