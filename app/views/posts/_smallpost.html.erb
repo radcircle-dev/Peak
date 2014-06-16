@@ -1,0 +1,6 @@
+<article class="post">
+	<h2> <%= link_to @post, @post %>
+	<p><%= raw(@post.subtitle) %></p>
+	<p><%= author_(@post)%>
+	<p><%= link_to raw('Read More &raquo;'), @post %></p>
+</article>
