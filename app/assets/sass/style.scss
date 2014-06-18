@@ -30,9 +30,15 @@ html, body {
 }
 
 .engineering-header h1 {
-	background-color: #fff;
+	color: #fff;
+	font-family: $stdfont;
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 0.5rem;
+	font-size: 5rem;
 	display: inline-block;
 	margin-top: 300px;
+	text-shadow: 7px 7px 7px rgba(0, 0, 0, 0.4);
 
 }
 
@@ -49,15 +55,21 @@ html, body {
 	letter-spacing: 0.2rem;
 }
 
+.new-post {
+	margin: 0 auto;
+	text-align: center;
+}
+
 span.new-post {
 	font-family: Helvetica 'Neue', Helvetica, Arial, sans-serif;
 	padding: 0 0 0 1rem;
 	font-size: 5rem;
+		margin: 0 auto;
+	text-align: center;
 }
 
 .new-post a, .new-post a:visited {
 	color: #444;
-	font-size: 5rem;
 	text-transform: uppercase;
 	font-weight: bold;
 }
@@ -201,7 +213,7 @@ span.new-post {
 
 /* DEVISE LINKS SCSS */
 
-.devise-links {
+span.devise-links {
 	font-family: $stdmont;
 	font-weight: 400;
 	font-size: 2rem;
@@ -209,6 +221,32 @@ span.new-post {
 	display: inline-block;
 	text-align: center;
 }
+
+
+#user_info {
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: 0.3rem;
+	color: #ccc;
+	font-family: $stdfont;
+	font-weight: 900;
+	padding: 1.5rem 0 1.5rem 0;
+	text-align: center;
+}
+
+	#user_info a {
+		color: #3498db;
+		border: 1px solid #ecf0f1;
+		border-radius: 0.3rem;
+		padding: 0.6rem;
+		transition: .25s all;
+	}
+
+		#user_info a:hover {
+			color: #2ecc71;
+			transition: .25s all;
+			text-decoration: none;
+		}
 
 /* */
 
@@ -317,7 +355,6 @@ textarea:focus, input:focus{
 .index-writing {
 	font-family: $stdfont;
 	font-size: 2rem;
-	display: block;
 }
 
 	.index-writing p {
