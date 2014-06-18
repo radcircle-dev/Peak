@@ -3,6 +3,6 @@ class Category < ActiveRecord::Base
 	has_many :posts, :through => :terms
 
 	def to_s
-		"title"
+		title
 	end
 end

@@ -1,5 +1,5 @@
 <h1>Category <em><%= @category %></em></h1>
 
 <section class="listing">
-	<%= render partial: 'posts/smallpost', collection: @category.posts.order('created_at desc') %>
+	<%= render partial: 'posts/post', collection: @category.posts.order('created_at desc') %>
 </section>

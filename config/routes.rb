@@ -10,8 +10,9 @@ Rails.application.routes.draw do
   devise_for :admins
   resources :welcome
   resources :posts
-  resources :comments
   resources :categories
+  resources :comments
+  
 
   root "posts#index"
   #this is a change
