@@ -1,6 +1,18 @@
-<article class="post">
-	<h2> <%= link_to @post, @post %>
-	<p><%= raw(@post.subtitle) %></p>
-	<p><%= author_(@post)%>
-	<p><%= link_to raw('Read More &raquo;'), @post %></p>
-</article>
+<table>
+  <tr>
+    <th>Title</th>
+   
+  </tr>
+ <% @posts.each do |p| %>
+    <tr>
+      
+      <td><%= link_to p, post_path(p) %> </td>
+       <% if admin_signed_in? %>;
+      <td><%= link_to "Edit", edit_post_path(p) %> </td>
+      
+      	<td><%= link_to 'Destroy', post_path(p), method: :delete, data: { confirm: 'Are you sure?' }%> </td>
+      	<%end%>
+    </tr>
+  <% end %>
+  
+</table>
