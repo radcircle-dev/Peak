@@ -1,18 +1,13 @@
-<table>
-  <tr>
-    <th>Title</th>
-   
-  </tr>
- <% @posts.each do |p| %>
-    <tr>
-      
-      <td><%= link_to p, post_path(p) %> </td>
-       <% if admin_signed_in? %>;
-      <td><%= link_to "Edit", edit_post_path(p) %> </td>
-      
-      	<td><%= link_to 'Destroy', post_path(p), method: :delete, data: { confirm: 'Are you sure?' }%> </td>
-      	<%end%>
-    </tr>
-  <% end %>
-  
-</table>
+ <div class="row">
+    <div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- left side -->
+      <div class="col-xs-12 col-md-8">
+         <% @posts.each do |p| %>
+          <p class="index-writing"><%= link_to p, post_path(p) %> </p>
+            <% if admin_signed_in? %>;
+            <%= link_to "Edit", edit_post_path(p) %>
+            <%= link_to 'Destroy', post_path(p), method: :delete, data: { confirm: 'Are you sure?' }%> </td>
+            <%end%>
+          <% end %>
+      </div>
+    <div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- right side -->
+  </div>

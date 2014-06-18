@@ -49,21 +49,22 @@ html, body {
 	letter-spacing: 0.2rem;
 }
 
-.new-post {
+span.new-post {
 	font-family: Helvetica 'Neue', Helvetica, Arial, sans-serif;
 	padding: 0 0 0 1rem;
+	font-size: 5rem;
 }
 
 .new-post a, .new-post a:visited {
 	color: #444;
-	font-size: 2rem;
+	font-size: 5rem;
 	text-transform: uppercase;
 	font-weight: bold;
 }
 
 .new-post:before {
 		font-family: 'FontAwesome';
-		font-size: 2rem;
+		font-size: 5rem;
 		color: #333;
 		padding: 0 0 0 0.5rem;
         content: "\f044";
@@ -232,6 +233,10 @@ textarea:focus, input:focus{
 		letter-spacing: 0.15rem;
 	}
 
+		.form-field label:focus, .form-field input:focus {
+			text-transform: none;
+		}
+
 .post-title-field input {
 	width: 100%;
 	border: none;
@@ -285,4 +290,38 @@ textarea:focus, input:focus{
 		background-color: #ccc;
 		color: #333;
 		transition: .25s all;
+	}
+
+
+/* category name scss */
+
+.post-category {
+	display: inline-block;
+}
+
+.category-name {
+	display: inline-block;
+	padding: 1rem;
+}
+
+.category-name label {
+	display: inline-block;
+}
+
+.category-name input {
+	display: inline-block;
+}
+
+/* index posts scss */
+
+.index-writing {
+	font-family: $stdfont;
+	font-size: 2rem;
+	display: block;
+}
+
+	.index-writing p {
+		font-family: $stdfont;
+		font-size: 2rem;
+		clear: both;
 	}
