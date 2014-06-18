@@ -18,7 +18,11 @@
 	<%end%>
 <%end%>
 <%= yield %>
-<%= user_logged_in_msg %>
+<% if admin_signed_in? %>
+	<%= admin_logged_in_msg %>
+	<%else%>
+	<%= user_logged_in_msg %>
+<%end%>
 </section>
 </body>
 </html>
