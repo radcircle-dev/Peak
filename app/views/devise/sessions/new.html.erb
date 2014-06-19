@@ -1,13 +1,13 @@
 	<div class="row">
+
 		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- left side -->
 			<div class="col-xs-12 col-md-6 login-page-logo-area">
 				<img src="http://i.imgur.com/MzhUrJw.png" alt="Radcircle Logo">
 			</div>
 		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- right side -->
-	</div>	
 
 
-	<div class="row">
+
 		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- left side -->
 			<div class="col-xs-12 col-md-6 login-page">
 				<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -15,34 +15,30 @@
   				<%= f.email_field :email, autofocus: true %>
 			</div>
 		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- right side -->
-	</div>	
 
-	<div class="row">
+
 		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- left side -->
 			<div class="col-xs-12 col-md-6 login-page">
 				  <%= f.label :password %><br />
    				  <%= f.password_field :password, autocomplete: "off" %>
 			</div>
 		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- right side -->
-	</div>	
 
 
-	<div class="row">
 		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- left side -->
 			<div class="col-xs-12 col-md-6">
 		
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+  			<% if devise_mapping.rememberable? -%>
+    		<div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+  			<% end -%>
 
 
-  <div class="login-page-button"><%= f.submit "Sign in" %></div>
+  			<div class="login-page-button"><%= f.submit "Sign in" %></div>
 <% end %>
 			</div>
 		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- right side -->
-	</div>	
 
-	<div class="row">
+
 		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- left side -->
 			<div class="col-xs-12 col-md-6">
 				<%= render "devise/shared/links" %>
