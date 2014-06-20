@@ -1,22 +1,21 @@
 /* SCSS for Pre-alpha E */
 
-/* index page */
-
 /* ideally we should see the navigation bar, coalescing of different kinds of posts, sign up, log in, etc etc .. */
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:100,300,900);
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
 
 $stdfont: 'Roboto', Helvetica 'Neue', Helvetica, Arial, sans-serif;
 $stdmont: 'Montserrat', Helvetica 'Neue', Helvetica, Arial, sans-serif;
 
-html, body {
-    height: 100%;
-}
+html, body {height: 100%} /* FOR 100% PAGE FILL */
 
-.fill { 
-    min-height: 100%;
-    height: 100%;
+.fill { min-height: 100%; height: 100%} /* FOR 100% PAGE FILL */
+
+.text-render {
+	text-rendering: optimizeLegibility;
+	text-rendering: geometricPrecision;
 }
 
 .engineering-header {
@@ -39,9 +38,7 @@ html, body {
 	display: inline-block;
 	margin-top: 300px;
 	text-shadow: 7px 7px 7px rgba(0, 0, 0, 0.4);
-
 }
-
 
 
 /* flash notices */
@@ -84,8 +81,15 @@ span.new-post {
 
 
 .create-new-post {
-
+	font-family: $stdfont;
+	font-size: 4rem;
+	color: #333;
 }
+
+	.create-new-post h1 {
+		@extend .create-new-post;
+		text-align: center;
+	}
 
 /* SHOW => POST PAGE SCSS */
 
@@ -110,8 +114,7 @@ span.new-post {
 	letter-spacing: 0.2rem;
 	text-align: center;
 	margin: 2rem 0 2rem 0;
-	text-rendering: optimizeLegibility;
-	text-rendering: geometricPrecision;
+	@extend .text-render;
 }
 
 
@@ -120,6 +123,7 @@ span.new-post {
 	font-weight: 300;
 	font-size: 2rem;
 	margin: 1rem 0 1rem 0;
+	@extend .text-render;
 }
 
 
@@ -129,18 +133,31 @@ span.new-post {
 	font-size: 4rem;
 	margin: 2rem 0 2rem 0;
 	color: #999;
+	@extend .text-render;
 }
 
 .post-body p {
-	font-family: $stdfont;
-	font-weight: 300;
-	font-size: 2.1rem;
-	word-spacing: 0.21rem;
-	color: #222;
-	text-rendering: optimizeLegibility;
-	text-rendering: geometricPrecision;
+	font-family: 'Vollkorn', serif;
+	font-weight: 400;
+	font-size: 2.3rem;
+	line-height: 3.9rem;
+	color: #444;
+	@extend .text-render;
 
 }
+
+.post-body p:first-letter { 
+	float: left; 
+	color: #333; 
+	font-size: 75px; 
+	line-height: 60px; 
+	padding-top: 4px; 
+	padding-right: 8px; 
+	padding-left: 3px; 
+	font-family: "Times New Roman", serif;
+	text-rendering: optimizeLegibility;
+	text-rendering: geometricPrecision;
+ }
 /* */
 
 
@@ -202,7 +219,6 @@ span.new-post {
 		}
 	
 	.login-page-button {
-		margin: 2.5rem 0 2.5rem 0;
 		text-align: center;
 
 	}
@@ -236,17 +252,29 @@ span.devise-links {
 
 	#user_info a {
 		color: #3498db;
-		border: 1px solid #ecf0f1;
+		border: 1px solid #dedede;
 		border-radius: 0.3rem;
 		padding: 0.6rem;
-		transition: .25s all;
+		transition: .4s all;
 	}
 
 		#user_info a:hover {
-			color: #2ecc71;
-			transition: .25s all;
+			color: #333;
+			border: 1px solid #333;
+			transition: .4s all;
 			text-decoration: none;
 		}
+
+		.login-btn:before {
+		font-family: 'FontAwesome';
+		font-size: 5rem;
+		color: #333;
+		padding: 0 0 0 0.5rem;
+        content: "\f090";
+		}
+
+		.logout-btn {}
+		.register-btn {}
 
 /* */
 
