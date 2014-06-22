@@ -55,4 +55,11 @@ class PostsController < ApplicationController
   		params.require(:post).permit(:title, :subtitle, :body, :link, :artist, :song, :author, :category_ids => [])
   	end
 
+    after_filter :set_access_control_headers
+
+  def set_access_control_headers 
+  headers['Access-Control-Allow-Origin'] = '*' 
+  headers['Access-Control-Request-Method'] = '*' 
+  end
+
 end
