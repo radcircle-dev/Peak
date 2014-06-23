@@ -1,0 +1,19 @@
+<% if admin_signed_in? %>
+<h1>BASECAMP</h1>
+<h2> Here is all the feedback we have recieved on the journey up the mountain </h2>
+ <h3>
+<table>
+  <tr>
+      <th>Text</th>
+  </tr>
+ 
+  <% @basecamps.each do |b| %>
+    <tr>
+      <td><%= b.text %></td>
+    </tr>
+  <% end %>
+</table>
+</h3>
+<% else %>
+ <h1> We appreciate your curiosity but please return to radcircle.</h1>
+<%end%>
