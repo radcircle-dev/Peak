@@ -53,6 +53,19 @@ Please feel free to use a different markup language if you do not plan to run
 	NOTES:
 		There is of course much left to do, but the basics of the blog system is about complete. Need to discuss further the roles of accounts and get a clear understanding of what functionality we want to provide on each level (including a visitor with no account).
 
+
+6/22/2014
+	-some notes before launching prealpha:
+		-the purpose of launching the prealpha is to learn how to deploy to a server, so i am less worried about the complete-ness of the code we lauch and more worried about learning from the process, so i will limit the number of things a user may have access too for this small launch
+		-i cannot get "therubyracer" gem to work and cannot, therefore, do any test on this code... at least for tonight (22:33 Central time)
+		-Features of the prealpha:
+			-Visiting the front page to see the posts from our engineers eagerly working at the launch
+			-a user clicks into a post and sees the necessary information only
+				-i will be temporarily disabling some parts of the show.html.erb -posts in order to make for a cleaner experience for the engineering blog (just commenting it out)
+			-the user can choose to comment on a post made by us
+			-that is the extent of the user experience
+			-an author can log in to make a post
+			-an admin can log in to delete posts
 =======
 
 6/2/14 - mo [testing branch]
