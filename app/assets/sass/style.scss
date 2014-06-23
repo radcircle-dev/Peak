@@ -10,6 +10,7 @@ $stdfont: 'Roboto', Helvetica 'Neue', Helvetica, Arial, sans-serif;
 $stdmont: 'Montserrat', Helvetica 'Neue', Helvetica, Arial, sans-serif;
 
 html, body {height: 100%} /* FOR 100% PAGE FILL */
+body {font-size: 62.5%}
 
 .fill { min-height: 100%; height: 100%} /* FOR 100% PAGE FILL */
 
@@ -18,26 +19,83 @@ html, body {height: 100%} /* FOR 100% PAGE FILL */
 	text-rendering: geometricPrecision;
 }
 
-.engineering-header {
-	background: url('http://i.imgur.com/ZFo0eXT.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    text-align: center;
-    height: 600px;
+
+
+.navigation-bar {
+	background-color: #fff;
 }
 
-.engineering-header h1 {
-	color: #fff;
-	font-family: $stdfont;
-	font-weight: 900;
-	text-transform: uppercase;
-	letter-spacing: 0.5rem;
-	font-size: 5rem;
-	display: inline-block;
-	margin-top: 300px;
-	text-shadow: 7px 7px 7px rgba(0, 0, 0, 0.4);
+	.navigation-bar h1 {
+		font-family: $stdfont;
+		font-size: 2.3rem;
+		font-weight: 900;
+		color: #222;
+		letter-spacing: 0.23rem;
+		text-transform: uppercase;
+		display: inline-block;
+	}
+
+		.navigation-bar h1:before {
+			font-family: 'FontAwesome';
+			font-size: 2.5rem;
+			color: #222;
+			padding: 0 0.5rem 0 0.5rem;
+			line-height: 2.5rem;
+       		content: "\f015";
+		}
+
+	.navigation-bar h2 {
+		font-family: $stdmont;
+		color: #888;
+		font-size: 1.6rem;
+		display: inline-block;
+		text-transform: uppercase;
+		letter-spacing: 0.16rem;
+		padding: 0 0.5rem 0 0.5rem;
+	}
+		.navigation-bar h2:hover {
+			color: #3498db;
+		}
+
+		.navigation-bar h2:first-of-type {
+			padding-left: 2rem;
+		}
+
+.login-nav-btn {
+			padding: 0 0.5rem 0 0.5rem;
+			text-align: right;
+}
+
+	.login-nav-btn:before {
+			font-family: 'FontAwesome';
+			font-size: 2rem;
+			color: #222;
+			padding: 0 0.5rem 0 0.5rem;
+			line-height: 2rem;
+       		content: "\f090";
+       		vertical-align:middle;
+	}
+
+.signup-nav-btn {
+			padding: 0 0.5rem 0 0.5rem;
+			text-align: right;
+}
+
+	.signup-nav-btn:before {
+			font-family: 'FontAwesome';
+			font-size: 2rem;
+			color: #222;
+			padding: 0 0.5rem 0 0.5rem;
+			line-height: 2rem;
+       		content: "\f007";
+       		vertical-align:middle;
+	}
+
+
+
+
+.posts-index { /* colors the bg behind the list of posts on the index */
+	background-color: #DADFE1;
 }
 
 
