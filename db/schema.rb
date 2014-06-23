@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+# I'm a comment, look at me!
 ActiveRecord::Schema.define(version: 20140618190108) do
 
   create_table "admins", force: true do |t|
