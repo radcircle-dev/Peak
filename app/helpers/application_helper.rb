@@ -7,7 +7,7 @@ module ApplicationHelper
 		if user_signed_in?
 			str += "<p id = ""user_info"">Logged in as #{current_user}<br>#{link_to('Logout', destroy_user_session_path, :method => :delete)}</p>"
 		else
-			str += "<p id = ""user_info"">#{link_to('Login', new_user_session_path)} or #{link_to('Register', new_user_registration_path)}</p>"
+			str += "<p id = ""user_info"">#{link_to('Login', new_user_session_path)} or #{link_to('Sign Up', new_user_registration_path)}</p>"
 		end
 		str += '			</div>
 		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- right side -->
