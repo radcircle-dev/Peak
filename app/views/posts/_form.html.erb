@@ -78,6 +78,17 @@
 
     <div class="row">
     <div class="col-xs-12 col-md-1"></div> <!-- left side -->
+      <div class="col-xs-12 col-md-10 post-title-field form-field"> 
+   <p>
+      Image: <br>
+      <%= f.text_field :author, placeholder: 'Link to Image'  %>
+    </p>
+       </div>
+    <div class="col-xs-12 col-md-1"></div> <!-- right side -->
+    </div>
+
+    <div class="row">
+    <div class="col-xs-12 col-md-1"></div> <!-- left side -->
       <div class="col-xs-12 col-md-10 submit-post-button"> 
     <p>
       <%= f.submit %>

@@ -2,12 +2,15 @@
 
          <% @posts.each do |p| %>
 
-          <p class="index-writing"><%= link_to p, post_path(p) %> </p>
+          <h3 class="index-writing"><%= link_to p, post_path(p) %> 	<img src=<%=p.author %>>
+          	<h4> <%= p.subtitle %> </h4>
 
-              <% if admin_signed_in? %>;
+              <% if admin_signed_in? %>
+              	<%= p.created_at%>
                 <%= link_to "Edit", edit_post_path(p) %>
                 <%= link_to 'Destroy', post_path(p), method: :delete, data: { confirm: 'Are you sure?' }%> 
               <%end%>
+          </h3>
 
 
           <% end %>
