@@ -15,8 +15,8 @@ gem 'capistrano-rails', '~> 1.1.1' # deployment gems
 # Add this if you're using rbenv
 # gem 'capistrano-rbenv', github: "capistrano/rbenv"
 
-# Add this if you're using rvm
- gem 'capistrano-rvm', github: "capistrano/rvm" # deployment gems
+# Add this if you're using rbenv
+ gem 'capistrano-rbenv', github: "capistrano/rbenv"
 
 
 # Use SCSS for stylesheets
