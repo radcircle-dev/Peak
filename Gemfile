@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 
@@ -8,6 +7,18 @@ gem 'paperclip', '~> 4.1.1'
 # Use sqlite3 as the database for Active Record
 
 gem 'sqlite3'
+
+gem 'capistrano', '~> 3.1.0' # deployment gems
+gem 'capistrano-bundler', '~> 1.1.2' # deployment gems
+gem 'capistrano-rails', '~> 1.1.1' # deployment gems
+
+# Add this if you're using rbenv
+# gem 'capistrano-rbenv', github: "capistrano/rbenv"
+
+# Add this if you're using rvm
+ gem 'capistrano-rvm', github: "capistrano/rvm" # deployment gems
+
+
 # Use SCSS for stylesheets
 gem 'devise'
 # Use for sign in/out
