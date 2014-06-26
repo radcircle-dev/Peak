@@ -33,15 +33,6 @@ body {font-size: 62.5%}
 		display: inline-block;
 	}
 
-		.navigation-bar h1:before {
-			font-family: 'FontAwesome';
-			font-size: 2.5rem;
-			color: #222;
-			padding: 0 0.5rem 0 0.5rem;
-			line-height: 2.5rem;
-       		content: "\f015";
-		}
-
 	.navigation-bar h2 {
 		font-family: $stdmont;
 		color: #888;
@@ -89,13 +80,103 @@ body {font-size: 62.5%}
        		vertical-align:middle;
 	}
 
+.logout-nav-btn:before {
+			font-family: 'FontAwesome';
+			font-size: 2rem;
+			color: #222;
+			padding: 0 0.5rem 0 0.5rem;
+			line-height: 2rem;
+       		content: "\f08b";
+       		vertical-align:middle;
+}
 
+.create-nav-btn:before {
+			font-family: 'FontAwesome';
+			font-size: 2rem;
+			color: #222;
+			padding: 0 0.5rem 0 0.5rem;
+			line-height: 2rem;
+       		content: "\f044";
+       		vertical-align:middle;
+}
+
+	
+.home-btn {
+	padding: 0 0.5rem 0 0;
+}
+
+
+/* end of buttons ^ */
 
 
 .posts-index { /* colors the bg behind the list of posts on the index */
 	background-color: #DADFE1;
 }
 
+.index-writing {
+	font-family: $stdfont;
+	font-size: 3rem;
+	overflow: hidden;
+	display: block;
+}
+
+	.index-writing img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+
+	}
+
+	h3.index-writing {
+		font-size: 4rem;
+		padding: 0.25rem 0 0.25rem 0;
+		font-weight: 900;
+	}
+
+	h4.index-writing {
+		font-size: 2.5rem;
+		font-weight: 300;
+	}
+
+
+
+/* index dates and stuff */
+
+.date-container {
+	border: 1px solid #888;
+	display: inline-block;
+	padding: 0.2rem;
+	margin: 20px 0 0 0;
+}
+
+.month-name {
+	font-family: $stdmont;
+	font-size: 2rem;
+	font-weight: 100;
+	color: #333;
+	float: left;
+}
+
+.day-number {
+	font-family: $stdmont;
+	font-size: 2rem;
+	font-weight: 100;
+	color: #333;
+	float: left;
+	padding: 0 0.5rem 0 0.5rem;
+}
+
+
+.year-number {
+	font-family: $stdfont;
+	font-weight: 100;
+	display: block;
+	text-align: right;
+	clear: left;
+	color: #e74c3c;
+	font-size: 2rem;
+	letter-spacing: 0.2rem;
+}
 
 /* flash notices */
 
@@ -148,6 +229,31 @@ span.new-post {
 	}
 
 /* SHOW => POST PAGE SCSS */
+
+
+.underbar {
+	height: 0.5rem;
+	background: #ea2e49; /* Old browsers */
+	background: -moz-linear-gradient(left,  #ea2e49 0%, #77c4d3 50%, #f6f792 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ea2e49), color-stop(50%,#77c4d3), color-stop(100%,#f6f792)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #ea2e49 0%,#77c4d3 50%,#f6f792 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #ea2e49 0%,#77c4d3 50%,#f6f792 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #ea2e49 0%,#77c4d3 50%,#f6f792 100%); /* IE10+ */
+	background: linear-gradient(to right,  #ea2e49 0%,#77c4d3 50%,#f6f792 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea2e49', endColorstr='#f6f792',GradientType=1 ); /* IE6-9 */
+}
+
+.post-image {
+	text-align: center;
+}
+.post-image img {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+}
 
 .post-songtitle-songartist span {
 	font-family: $stdfont;
@@ -391,21 +497,24 @@ textarea:focus, input:focus{
 	background-repeat: no-repeat;
 }
 
+.submit-post-button {
+	text-align: center;
+	margin: 2rem 0 2rem 0;
+}
+
 .submit-post-button input {
 	display: inline-block;
 	background-color: #f65d5d;
 	color: #333;
-	padding: 0.5rem;
-	font-family: $stdfont;
-	font-weight: 100;
+	padding: 0.7rem;
+	font-family: $stdmont;
+	font-weight: 900;
 	letter-spacing: 0.35rem;
-	font-size: 3.5rem;
+	font-size: 7rem;
 	border: none;
 	text-transform: uppercase;
-	float: right;
 	margin-top: 1rem 0 1rem 0;
 	transition: .25s all;
-
 }
 
 	.submit-post-button input:hover {
@@ -413,6 +522,22 @@ textarea:focus, input:focus{
 		color: #333;
 		transition: .25s all;
 	}
+
+/* LG MD SM XS MEDIA QUERIES  FOR SUBMIT POST BUTTON INPUT */
+
+@media (min-width: 1200px) {
+	.submit-post-button input {font-size: 8.5rem;}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.submit-post-button input {font-size: 6.5rem;}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.submit-post-button input {font-size: 4.5rem;}
+}
+@media (max-width: 767px) {
+	.submit-post-button input {font-size: 4rem;}
+}
+
 
 
 /* category name scss */
