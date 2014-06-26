@@ -44,16 +44,6 @@ body {
 }
 
 /* line 36, ../sass/style.scss */
-.navigation-bar h1:before {
-  font-family: 'FontAwesome';
-  font-size: 2.5rem;
-  color: #222;
-  padding: 0 0.5rem 0 0.5rem;
-  line-height: 2.5rem;
-  content: "\f015";
-}
-
-/* line 45, ../sass/style.scss */
 .navigation-bar h2 {
   font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
   color: #888;
@@ -64,23 +54,23 @@ body {
   padding: 0 0.5rem 0 0.5rem;
 }
 
-/* line 54, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 .navigation-bar h2:hover {
   color: #3498db;
 }
 
-/* line 58, ../sass/style.scss */
+/* line 49, ../sass/style.scss */
 .navigation-bar h2:first-of-type {
   padding-left: 2rem;
 }
 
-/* line 62, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 .login-nav-btn {
   padding: 0 0.5rem 0 0.5rem;
   text-align: right;
 }
 
-/* line 67, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 .login-nav-btn:before {
   font-family: 'FontAwesome';
   font-size: 2rem;
@@ -91,13 +81,13 @@ body {
   vertical-align: middle;
 }
 
-/* line 77, ../sass/style.scss */
+/* line 68, ../sass/style.scss */
 .signup-nav-btn {
   padding: 0 0.5rem 0 0.5rem;
   text-align: right;
 }
 
-/* line 82, ../sass/style.scss */
+/* line 73, ../sass/style.scss */
 .signup-nav-btn:before {
   font-family: 'FontAwesome';
   font-size: 2rem;
@@ -108,14 +98,110 @@ body {
   vertical-align: middle;
 }
 
-/* line 95, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
+.logout-nav-btn:before {
+  font-family: 'FontAwesome';
+  font-size: 2rem;
+  color: #222;
+  padding: 0 0.5rem 0 0.5rem;
+  line-height: 2rem;
+  content: "\f08b";
+  vertical-align: middle;
+}
+
+/* line 93, ../sass/style.scss */
+.create-nav-btn:before {
+  font-family: 'FontAwesome';
+  font-size: 2rem;
+  color: #222;
+  padding: 0 0.5rem 0 0.5rem;
+  line-height: 2rem;
+  content: "\f044";
+  vertical-align: middle;
+}
+
+/* line 104, ../sass/style.scss */
+.home-btn {
+  padding: 0 0.5rem 0 0;
+}
+
+/* end of buttons ^ */
+/* line 112, ../sass/style.scss */
 .posts-index {
   /* colors the bg behind the list of posts on the index */
   background-color: #DADFE1;
 }
 
+/* line 116, ../sass/style.scss */
+.index-writing {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 3rem;
+  overflow: hidden;
+  display: block;
+}
+
+/* line 123, ../sass/style.scss */
+.index-writing img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* line 130, ../sass/style.scss */
+h3.index-writing {
+  font-size: 4rem;
+  padding: 0.25rem 0 0.25rem 0;
+  font-weight: 900;
+}
+
+/* line 136, ../sass/style.scss */
+h4.index-writing {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+/* index dates and stuff */
+/* line 145, ../sass/style.scss */
+.date-container {
+  border: 1px solid #888;
+  display: inline-block;
+  padding: 0.2rem;
+  margin: 20px 0 0 0;
+}
+
+/* line 152, ../sass/style.scss */
+.month-name {
+  font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+  color: #333;
+  float: left;
+}
+
+/* line 160, ../sass/style.scss */
+.day-number {
+  font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+  color: #333;
+  float: left;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+/* line 170, ../sass/style.scss */
+.year-number {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  display: block;
+  text-align: right;
+  clear: left;
+  color: #e74c3c;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+}
+
 /* flash notices */
-/* line 102, ../sass/style.scss */
+/* line 183, ../sass/style.scss */
 .flash.notice {
   background-color: #2ecc71;
   font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
@@ -125,13 +211,13 @@ body {
   letter-spacing: 0.2rem;
 }
 
-/* line 111, ../sass/style.scss */
+/* line 192, ../sass/style.scss */
 .new-post {
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 116, ../sass/style.scss */
+/* line 197, ../sass/style.scss */
 span.new-post {
   font-family: Helvetica 'Neue', Helvetica, Arial, sans-serif;
   padding: 0 0 0 1rem;
@@ -140,14 +226,14 @@ span.new-post {
   text-align: center;
 }
 
-/* line 124, ../sass/style.scss */
+/* line 205, ../sass/style.scss */
 .new-post a, .new-post a:visited {
   color: #444;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-/* line 130, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
 .new-post:before {
   font-family: 'FontAwesome';
   font-size: 5rem;
@@ -156,20 +242,56 @@ span.new-post {
   content: "\f044";
 }
 
-/* line 139, ../sass/style.scss */
+/* line 220, ../sass/style.scss */
 .create-new-post, .create-new-post h1 {
   font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-size: 4rem;
   color: #333;
 }
 
-/* line 145, ../sass/style.scss */
+/* line 226, ../sass/style.scss */
 .create-new-post h1 {
   text-align: center;
 }
 
 /* SHOW => POST PAGE SCSS */
-/* line 152, ../sass/style.scss */
+/* line 234, ../sass/style.scss */
+.underbar {
+  height: 0.5rem;
+  background: #ea2e49;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #ea2e49 0%, #77c4d3 50%, #f6f792 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ea2e49), color-stop(50%, #77c4d3), color-stop(100%, #f6f792));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #ea2e49 0%, #77c4d3 50%, #f6f792 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #ea2e49 0%, #77c4d3 50%, #f6f792 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #ea2e49 0%, #77c4d3 50%, #f6f792 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, #ea2e49 0%, #77c4d3 50%, #f6f792 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ea2e49', endColorstr='#f6f792',GradientType=1 );
+  /* IE6-9 */
+}
+
+/* line 246, ../sass/style.scss */
+.post-image {
+  text-align: center;
+}
+
+/* line 249, ../sass/style.scss */
+.post-image img {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 258, ../sass/style.scss */
 .post-songtitle-songartist span {
   font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
@@ -183,7 +305,7 @@ span.new-post {
   padding: 0.5rem;
 }
 
-/* line 165, ../sass/style.scss */
+/* line 271, ../sass/style.scss */
 .post-title, .post-author, .post-subtitle {
   font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-weight: 900;
@@ -194,14 +316,14 @@ span.new-post {
   margin: 2rem 0 2rem 0;
 }
 
-/* line 177, ../sass/style.scss */
+/* line 283, ../sass/style.scss */
 .post-author {
   font-weight: 300;
   font-size: 2rem;
   margin: 1rem 0 1rem 0;
 }
 
-/* line 186, ../sass/style.scss */
+/* line 292, ../sass/style.scss */
 .post-subtitle {
   font-weight: 100;
   font-size: 4rem;
@@ -209,7 +331,7 @@ span.new-post {
   color: #999;
 }
 
-/* line 195, ../sass/style.scss */
+/* line 301, ../sass/style.scss */
 .post-body p {
   font-family: 'Vollkorn', serif;
   font-weight: 400;
@@ -218,7 +340,7 @@ span.new-post {
   color: #444;
 }
 
-/* line 205, ../sass/style.scss */
+/* line 311, ../sass/style.scss */
 .post-body p:first-letter {
   float: left;
   color: #333;
@@ -234,18 +356,18 @@ span.new-post {
 
 /* */
 /* LOGIN PAGE SCSS */
-/* line 223, ../sass/style.scss */
+/* line 329, ../sass/style.scss */
 .login-page {
   margin-top: 5rem;
 }
 
-/* line 227, ../sass/style.scss */
+/* line 333, ../sass/style.scss */
 .login-page-logo-area {
   text-align: center;
   margin-top: 5rem;
 }
 
-/* line 232, ../sass/style.scss */
+/* line 338, ../sass/style.scss */
 .login-page input {
   width: 100%;
   border: none;
@@ -255,12 +377,12 @@ span.new-post {
   font-weight: 900;
 }
 
-/* line 242, ../sass/style.scss */
+/* line 348, ../sass/style.scss */
 .login-page input {
   margin-top: 2.5rem;
 }
 
-/* line 246, ../sass/style.scss */
+/* line 352, ../sass/style.scss */
 .login-page label {
   background-color: #ecf0f1;
   color: #222;
@@ -271,7 +393,7 @@ span.new-post {
   font-weight: 100;
 }
 
-/* line 256, ../sass/style.scss */
+/* line 362, ../sass/style.scss */
 .login-page-button input {
   display: inline-block;
   border-radius: 10px;
@@ -288,21 +410,21 @@ span.new-post {
   transition: 0.25s all;
 }
 
-/* line 271, ../sass/style.scss */
+/* line 377, ../sass/style.scss */
 .login-page-button input:hover {
   background-color: #333;
   color: #ecf0f1;
   transition: 0.25s all;
 }
 
-/* line 277, ../sass/style.scss */
+/* line 383, ../sass/style.scss */
 .login-page-button {
   text-align: center;
 }
 
 /* END LOGIN PAGE SCSS */
 /* DEVISE LINKS SCSS */
-/* line 288, ../sass/style.scss */
+/* line 394, ../sass/style.scss */
 span.devise-links {
   font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -312,7 +434,7 @@ span.devise-links {
   text-align: center;
 }
 
-/* line 298, ../sass/style.scss */
+/* line 404, ../sass/style.scss */
 #user_info {
   font-size: 3rem;
   text-transform: uppercase;
@@ -324,7 +446,7 @@ span.devise-links {
   text-align: center;
 }
 
-/* line 309, ../sass/style.scss */
+/* line 415, ../sass/style.scss */
 #user_info a {
   color: #3498db;
   border: 1px solid #dedede;
@@ -333,7 +455,7 @@ span.devise-links {
   transition: .4s all;
 }
 
-/* line 317, ../sass/style.scss */
+/* line 423, ../sass/style.scss */
 #user_info a:hover {
   color: #333;
   border: 1px solid #333;
@@ -341,7 +463,7 @@ span.devise-links {
   text-decoration: none;
 }
 
-/* line 324, ../sass/style.scss */
+/* line 430, ../sass/style.scss */
 .login-btn:before {
   font-family: 'FontAwesome';
   font-size: 5rem;
@@ -351,17 +473,17 @@ span.devise-links {
 }
 
 /* */
-/* line 339, ../sass/style.scss */
+/* line 445, ../sass/style.scss */
 textarea:focus, input:focus {
   outline: 0;
 }
 
-/* line 343, ../sass/style.scss */
+/* line 449, ../sass/style.scss */
 .form-field {
   margin-top: 1rem;
 }
 
-/* line 347, ../sass/style.scss */
+/* line 453, ../sass/style.scss */
 .form-field label {
   font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
@@ -373,12 +495,12 @@ textarea:focus, input:focus {
   letter-spacing: 0.15rem;
 }
 
-/* line 358, ../sass/style.scss */
+/* line 464, ../sass/style.scss */
 .form-field label:focus, .form-field input:focus {
   text-transform: none;
 }
 
-/* line 362, ../sass/style.scss */
+/* line 468, ../sass/style.scss */
 .post-title-field input {
   width: 100%;
   border: none;
@@ -389,7 +511,7 @@ textarea:focus, input:focus {
   text-transform: uppercase;
 }
 
-/* line 372, ../sass/style.scss */
+/* line 478, ../sass/style.scss */
 .post-title-area textarea {
   width: 100%;
   border: 1px solid 333;
@@ -398,7 +520,7 @@ textarea:focus, input:focus {
   font-weight: bold;
 }
 
-/* line 380, ../sass/style.scss */
+/* line 486, ../sass/style.scss */
 .rad-textarea textarea {
   margin: 1rem 0 1rem 0;
   width: 100%;
@@ -413,60 +535,90 @@ textarea:focus, input:focus {
   background-repeat: no-repeat;
 }
 
-/* line 394, ../sass/style.scss */
+/* line 500, ../sass/style.scss */
+.submit-post-button {
+  text-align: center;
+  margin: 2rem 0 2rem 0;
+}
+
+/* line 505, ../sass/style.scss */
 .submit-post-button input {
   display: inline-block;
   background-color: #f65d5d;
   color: #333;
-  padding: 0.5rem;
-  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
-  font-weight: 100;
+  padding: 0.7rem;
+  font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-weight: 900;
   letter-spacing: 0.35rem;
-  font-size: 3.5rem;
+  font-size: 7rem;
   border: none;
   text-transform: uppercase;
-  float: right;
   margin-top: 1rem 0 1rem 0;
   transition: .25s all;
 }
 
-/* line 411, ../sass/style.scss */
+/* line 520, ../sass/style.scss */
 .submit-post-button input:hover {
   background-color: #ccc;
   color: #333;
   transition: .25s all;
 }
 
+/* LG MD SM XS MEDIA QUERIES  FOR SUBMIT POST BUTTON INPUT */
+@media (min-width: 1200px) {
+  /* line 529, ../sass/style.scss */
+  .submit-post-button input {
+    font-size: 8.5rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 532, ../sass/style.scss */
+  .submit-post-button input {
+    font-size: 6.5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 535, ../sass/style.scss */
+  .submit-post-button input {
+    font-size: 4.5rem;
+  }
+}
+@media (max-width: 767px) {
+  /* line 538, ../sass/style.scss */
+  .submit-post-button input {
+    font-size: 4rem;
+  }
+}
 /* category name scss */
-/* line 420, ../sass/style.scss */
+/* line 545, ../sass/style.scss */
 .post-category {
   display: inline-block;
 }
 
-/* line 424, ../sass/style.scss */
+/* line 549, ../sass/style.scss */
 .category-name {
   display: inline-block;
   padding: 1rem;
 }
 
-/* line 429, ../sass/style.scss */
+/* line 554, ../sass/style.scss */
 .category-name label {
   display: inline-block;
 }
 
-/* line 433, ../sass/style.scss */
+/* line 558, ../sass/style.scss */
 .category-name input {
   display: inline-block;
 }
 
 /* index posts scss */
-/* line 439, ../sass/style.scss */
+/* line 564, ../sass/style.scss */
 .index-writing {
   font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-size: 2rem;
 }
 
-/* line 444, ../sass/style.scss */
+/* line 569, ../sass/style.scss */
 .index-writing p {
   font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-size: 2rem;
