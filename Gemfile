@@ -6,7 +6,11 @@ gem 'rails', '4.1.1'
 gem 'paperclip', '~> 4.1.1'
 # Use sqlite3 as the database for Active Record
 
-gem 'sqlite3'
+	# USE THIS WHEN DEVLOPING LOCALLY
+ gem 'sqlite3'
+
+gem 'rake', '~> 10.3.2'
+
 
 #gem 'capistrano', '~> 3.1.0' # deployment gems
 #gem 'capistrano-bundler', '~> 1.1.2' # deployment gems
@@ -18,9 +22,11 @@ gem 'sqlite3'
 # Add this if you're using rbenv
  #gem 'capistrano-rbenv', github: "capistrano/rbenv"
 
-group :production do
-    gem 'mysql2'
-end
+# UNCOMMENT WHEN PRODUCTION
+# gem 'mysql2'
+# group :production do
+#     gem 'mysql2'
+# end
 
 # Use SCSS for stylesheets
 gem 'devise'
