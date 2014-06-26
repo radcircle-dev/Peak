@@ -80,6 +80,22 @@ body {font-size: 62.5%}
        		vertical-align:middle;
 	}
 
+.edit-nav-btn {
+			padding: 0 0.5rem 0 0.5rem;
+			text-align: right;
+}
+
+	.edit-nav-btn:before {
+			font-family: 'FontAwesome';
+			font-size: 2rem;
+			color: #222;
+			padding: 0 0.5rem 0 0.5rem;
+			line-height: 2rem;
+       		content: "\f013";
+       		vertical-align:middle;
+	}
+
+
 .logout-nav-btn:before {
 			font-family: 'FontAwesome';
 			font-size: 2rem;
@@ -571,3 +587,4 @@ textarea:focus, input:focus{
 		font-size: 2rem;
 		clear: both;
 	}
+
