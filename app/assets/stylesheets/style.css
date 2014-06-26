@@ -1,52 +1,474 @@
 /* SCSS for Pre-alpha E */
-/* index page */
 /* ideally we should see the navigation bar, coalescing of different kinds of posts, sign up, log in, etc etc .. */
-/* flash notices */
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,900);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
 /* line 12, ../sass/style.scss */
+html, body {
+  height: 100%;
+}
+
+/* FOR 100% PAGE FILL */
+/* line 13, ../sass/style.scss */
+body {
+  font-size: 62.5%;
+}
+
+/* line 15, ../sass/style.scss */
+.fill {
+  min-height: 100%;
+  height: 100%;
+}
+
+/* FOR 100% PAGE FILL */
+/* line 17, ../sass/style.scss */
+.text-render, .post-title, .post-author, .post-subtitle, .post-body p {
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+}
+
+/* line 22, ../sass/style.scss */
+.navigation-bar {
+  background-color: #fff;
+}
+
+/* line 26, ../sass/style.scss */
+.navigation-bar h1 {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: #222;
+  letter-spacing: 0.23rem;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* line 36, ../sass/style.scss */
+.navigation-bar h1:before {
+  font-family: 'FontAwesome';
+  font-size: 2.5rem;
+  color: #222;
+  padding: 0 0.5rem 0 0.5rem;
+  line-height: 2.5rem;
+  content: "\f015";
+}
+
+/* line 45, ../sass/style.scss */
+.navigation-bar h2 {
+  font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  color: #888;
+  font-size: 1.6rem;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.16rem;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+/* line 54, ../sass/style.scss */
+.navigation-bar h2:hover {
+  color: #3498db;
+}
+
+/* line 58, ../sass/style.scss */
+.navigation-bar h2:first-of-type {
+  padding-left: 2rem;
+}
+
+/* line 62, ../sass/style.scss */
+.login-nav-btn {
+  padding: 0 0.5rem 0 0.5rem;
+  text-align: right;
+}
+
+/* line 67, ../sass/style.scss */
+.login-nav-btn:before {
+  font-family: 'FontAwesome';
+  font-size: 2rem;
+  color: #222;
+  padding: 0 0.5rem 0 0.5rem;
+  line-height: 2rem;
+  content: "\f090";
+  vertical-align: middle;
+}
+
+/* line 77, ../sass/style.scss */
+.signup-nav-btn {
+  padding: 0 0.5rem 0 0.5rem;
+  text-align: right;
+}
+
+/* line 82, ../sass/style.scss */
+.signup-nav-btn:before {
+  font-family: 'FontAwesome';
+  font-size: 2rem;
+  color: #222;
+  padding: 0 0.5rem 0 0.5rem;
+  line-height: 2rem;
+  content: "\f007";
+  vertical-align: middle;
+}
+
+/* line 95, ../sass/style.scss */
+.posts-index {
+  /* colors the bg behind the list of posts on the index */
+  background-color: #DADFE1;
+}
+
+/* flash notices */
+/* line 102, ../sass/style.scss */
 .flash.notice {
   background-color: #2ecc71;
-  font-family: Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-size: 4rem;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 0.2rem;
 }
 
-/* line 21, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 .new-post {
-  font-family: Helvetica 'Neue', Helvetica, Arial, sans-serif;
-  padding: 0 0 0 1rem;
+  margin: 0 auto;
+  text-align: center;
 }
 
-/* line 26, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
+span.new-post {
+  font-family: Helvetica 'Neue', Helvetica, Arial, sans-serif;
+  padding: 0 0 0 1rem;
+  font-size: 5rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 124, ../sass/style.scss */
 .new-post a, .new-post a:visited {
   color: #444;
-  font-size: 2rem;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-/* line 33, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 .new-post:before {
   font-family: 'FontAwesome';
-  font-size: 2rem;
+  font-size: 5rem;
   color: #333;
   padding: 0 0 0 0.5rem;
   content: "\f044";
 }
 
-/* line 47, ../sass/style.scss */
+/* line 139, ../sass/style.scss */
+.create-new-post, .create-new-post h1 {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 4rem;
+  color: #333;
+}
+
+/* line 145, ../sass/style.scss */
+.create-new-post h1 {
+  text-align: center;
+}
+
+/* SHOW => POST PAGE SCSS */
+/* line 152, ../sass/style.scss */
+.post-songtitle-songartist span {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  background-color: #333;
+  color: #fff;
+  font-size: 2rem;
+  margin: 1rem 0 1rem 0;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 0.5rem;
+}
+
+/* line 165, ../sass/style.scss */
+.post-title, .post-author, .post-subtitle {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  margin: 2rem 0 2rem 0;
+}
+
+/* line 177, ../sass/style.scss */
+.post-author {
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 1rem 0 1rem 0;
+}
+
+/* line 186, ../sass/style.scss */
+.post-subtitle {
+  font-weight: 100;
+  font-size: 4rem;
+  margin: 2rem 0 2rem 0;
+  color: #999;
+}
+
+/* line 195, ../sass/style.scss */
+.post-body p {
+  font-family: 'Vollkorn', serif;
+  font-weight: 400;
+  font-size: 2.3rem;
+  line-height: 3.9rem;
+  color: #444;
+}
+
+/* line 205, ../sass/style.scss */
+.post-body p:first-letter {
+  float: left;
+  color: #333;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+  font-family: "Times New Roman", serif;
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+}
+
+/* */
+/* LOGIN PAGE SCSS */
+/* line 223, ../sass/style.scss */
+.login-page {
+  margin-top: 5rem;
+}
+
+/* line 227, ../sass/style.scss */
+.login-page-logo-area {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/* line 232, ../sass/style.scss */
+.login-page input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #333;
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+/* line 242, ../sass/style.scss */
+.login-page input {
+  margin-top: 2.5rem;
+}
+
+/* line 246, ../sass/style.scss */
+.login-page label {
+  background-color: #ecf0f1;
+  color: #222;
+  font-size: 2rem;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  font-weight: 100;
+}
+
+/* line 256, ../sass/style.scss */
+.login-page-button input {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #ecf0f1;
+  font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  border: none;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.3rem;
+  font-size: 3rem;
+  font-weight: 400;
+  padding: 1.5rem;
+  color: #333;
+  text-align: center;
+  transition: 0.25s all;
+}
+
+/* line 271, ../sass/style.scss */
+.login-page-button input:hover {
+  background-color: #333;
+  color: #ecf0f1;
+  transition: 0.25s all;
+}
+
+/* line 277, ../sass/style.scss */
+.login-page-button {
+  text-align: center;
+}
+
+/* END LOGIN PAGE SCSS */
+/* DEVISE LINKS SCSS */
+/* line 288, ../sass/style.scss */
+span.devise-links {
+  font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #333;
+  display: inline-block;
+  text-align: center;
+}
+
+/* line 298, ../sass/style.scss */
+#user_info {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: #ccc;
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  padding: 1.5rem 0 1.5rem 0;
+  text-align: center;
+}
+
+/* line 309, ../sass/style.scss */
+#user_info a {
+  color: #3498db;
+  border: 1px solid #dedede;
+  border-radius: 0.3rem;
+  padding: 0.6rem;
+  transition: .4s all;
+}
+
+/* line 317, ../sass/style.scss */
+#user_info a:hover {
+  color: #333;
+  border: 1px solid #333;
+  transition: .4s all;
+  text-decoration: none;
+}
+
+/* line 324, ../sass/style.scss */
+.login-btn:before {
+  font-family: 'FontAwesome';
+  font-size: 5rem;
+  color: #333;
+  padding: 0 0 0 0.5rem;
+  content: "\f090";
+}
+
+/* */
+/* line 339, ../sass/style.scss */
+textarea:focus, input:focus {
+  outline: 0;
+}
+
+/* line 343, ../sass/style.scss */
+.form-field {
+  margin-top: 1rem;
+}
+
+/* line 347, ../sass/style.scss */
+.form-field label {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  background-color: #666;
+  color: #fff;
+  padding: 5px;
+  letter-spacing: 0.15rem;
+}
+
+/* line 358, ../sass/style.scss */
+.form-field label:focus, .form-field input:focus {
+  text-transform: none;
+}
+
+/* line 362, ../sass/style.scss */
 .post-title-field input {
   width: 100%;
   border: none;
-  border-bottom: 5px solid #333;
+  border-bottom: 1px solid #333;
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
-/* line 53, ../sass/style.scss */
+/* line 372, ../sass/style.scss */
 .post-title-area textarea {
   width: 100%;
   border: 1px solid 333;
   font-family: Helvetica, arial, sans-serif;
   font-size: 2rem;
   font-weight: bold;
+}
+
+/* line 380, ../sass/style.scss */
+.rad-textarea textarea {
+  margin: 1rem 0 1rem 0;
+  width: 100%;
+  height: 120px;
+  border: 3px solid #cccccc;
+  padding: 5px;
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  word-spacing: 0.16rem;
+  background-image: url(http://i.imgur.com/RcrYiFC.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+/* line 394, ../sass/style.scss */
+.submit-post-button input {
+  display: inline-block;
+  background-color: #f65d5d;
+  color: #333;
+  padding: 0.5rem;
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.35rem;
+  font-size: 3.5rem;
+  border: none;
+  text-transform: uppercase;
+  float: right;
+  margin-top: 1rem 0 1rem 0;
+  transition: .25s all;
+}
+
+/* line 411, ../sass/style.scss */
+.submit-post-button input:hover {
+  background-color: #ccc;
+  color: #333;
+  transition: .25s all;
+}
+
+/* category name scss */
+/* line 420, ../sass/style.scss */
+.post-category {
+  display: inline-block;
+}
+
+/* line 424, ../sass/style.scss */
+.category-name {
+  display: inline-block;
+  padding: 1rem;
+}
+
+/* line 429, ../sass/style.scss */
+.category-name label {
+  display: inline-block;
+}
+
+/* line 433, ../sass/style.scss */
+.category-name input {
+  display: inline-block;
+}
+
+/* index posts scss */
+/* line 439, ../sass/style.scss */
+.index-writing {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+}
+
+/* line 444, ../sass/style.scss */
+.index-writing p {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  clear: both;
 }
