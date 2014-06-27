@@ -399,8 +399,39 @@ p:first-child:first-letter {
 	background-color: #ecf0f1;
 }
 
+	.comments-box textarea {
+		background-color: #fff;
+		width: 100%;
+		border: none;
+		height: 10rem;
+		font-family: $stdfont;
+		font-size: 2.1rem;
+		line-height: 3.6rem;
+		padding: 0.21rem;
+		color: #333;
+	}
+
+	.comments-box-submit-btn input {
+		width: 100%;
+		background-color: #2ecc71;
+		height: 3rem;
+		font-family: $stdmont;
+		font-size: 2rem;
+		letter-spacing: 0.2rem;
+		color: #333;
+		border: none;
+		text-transform: uppercase;
+		@extend .slow-fade;
+		margin-bottom: 2.5rem;
+	}
+
+		.comments-box-submit-btn input:hover {
+			background-color: #3498db;
+			@extend .slow-fade;
+		}
+
 .comment {
-	margin: 1.5rem 0 1.5rem 0;
+
 }
 
 .comment-author {
@@ -411,6 +442,7 @@ p:first-child:first-letter {
 	display: block;
 	color: #666;
 	text-align: left;
+	margin-top: 2.5rem;
 }
 
 .comment-text {
@@ -698,3 +730,28 @@ textarea:focus, input:focus{
 		clear: both;
 	}
 
+
+/* &SEARCH */
+
+.search {
+	line-height: auto;
+}
+
+.search:hover {
+	cursor: pointer;
+}
+
+.search-bar {
+	display: none;
+	width: 100%;
+	height: 5rem;
+	margin: 1rem;
+}
+
+.search-bar input {
+	width: 100%;
+	border-top: none; border-left: none; border-right: none;
+	border-bottom: 1px solid #333;
+	font-family: $stdfont;
+	font-size: 4rem;
+}
