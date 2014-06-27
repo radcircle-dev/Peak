@@ -39,12 +39,15 @@
 		<div class = "flash <%= level%>"><%= flash[level] %> </div>
 	<%end%>
 <%end%>
+</section>
+
+<div class="container-fluid">
 <%= yield %>
 <% if admin_signed_in? %>
 	<%= admin_logged_in_msg %>
 	<%else%>
 	<%= user_logged_in_msg %>
 <%end%>
-</section>
+</div>
 </body>
 </html>

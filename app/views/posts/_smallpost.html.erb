@@ -1,9 +1,9 @@
       <% @posts.each do |p| %>
 
           <div class="date-container">
-            <span class="month-name"> <%= p.created_at.strftime("%b") %> </span>
-            <span class="day-number"> <%= p.created_at.strftime("%d") %> </span>
-            <span class="year-number"><%= p.created_at.strftime("%Y") %> </span>
+            <div class="day-name">  <%= p.created_at.strftime("%a") %> </div>
+            <div class="month-name"> <%= p.created_at.strftime("%b") %> </div>
+            <div class="day-number"> <%= p.created_at.strftime("%e") %> </div>
           </div>
 
           <h3 class="index-writing"><%= link_to p, post_path(p) %> 
@@ -13,7 +13,7 @@
           	<h4> <%= p.subtitle %> </h4>
 
               <% if admin_signed_in? %>
-              	<%= p.created_at%>
+              	<%= p.created_at %>
                 <%= link_to "Edit", edit_post_path(p) %>
                 <%= link_to 'Destroy', post_path(p), method: :delete, data: { confirm: 'Are you sure?' }%> 
               <%end%>
