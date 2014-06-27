@@ -4,10 +4,13 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-    has_many :posts
-    has_many :comments
+  has_many :posts
+  has_many :comments
 
-    def to_s
-    	"#{prname}"
-    end
+  validates :prname, presence: true
+  validates :email, presence: true
+
+  def to_s
+    "#{prname}"
+  end
 end
