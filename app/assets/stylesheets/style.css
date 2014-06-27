@@ -99,6 +99,23 @@ body {
 }
 
 /* line 83, ../sass/style.scss */
+.edit-nav-btn {
+  padding: 0 0.5rem 0 0.5rem;
+  text-align: right;
+}
+
+/* line 88, ../sass/style.scss */
+.edit-nav-btn:before {
+  font-family: 'FontAwesome';
+  font-size: 2rem;
+  color: #222;
+  padding: 0 0.5rem 0 0.5rem;
+  line-height: 2rem;
+  content: "\f013";
+  vertical-align: middle;
+}
+
+/* line 99, ../sass/style.scss */
 .logout-nav-btn:before {
   font-family: 'FontAwesome';
   font-size: 2rem;
@@ -109,7 +126,7 @@ body {
   vertical-align: middle;
 }
 
-/* line 93, ../sass/style.scss */
+/* line 109, ../sass/style.scss */
 .create-nav-btn:before {
   font-family: 'FontAwesome';
   font-size: 2rem;
@@ -120,19 +137,19 @@ body {
   vertical-align: middle;
 }
 
-/* line 104, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 .home-btn {
   padding: 0 0.5rem 0 0;
 }
 
 /* end of buttons ^ */
-/* line 112, ../sass/style.scss */
+/* line 128, ../sass/style.scss */
 .posts-index {
   /* colors the bg behind the list of posts on the index */
   background-color: #DADFE1;
 }
 
-/* line 116, ../sass/style.scss */
+/* line 132, ../sass/style.scss */
 .index-writing {
   font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-size: 3rem;
@@ -140,28 +157,28 @@ body {
   display: block;
 }
 
-/* line 123, ../sass/style.scss */
+/* line 139, ../sass/style.scss */
 .index-writing img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* line 130, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
 h3.index-writing {
   font-size: 4rem;
   padding: 0.25rem 0 0.25rem 0;
   font-weight: 900;
 }
 
-/* line 136, ../sass/style.scss */
+/* line 152, ../sass/style.scss */
 h4.index-writing {
   font-size: 2.5rem;
   font-weight: 300;
 }
 
 /* index dates and stuff */
-/* line 145, ../sass/style.scss */
+/* line 161, ../sass/style.scss */
 .date-container {
   border: 1px solid #888;
   display: inline-block;
@@ -169,7 +186,7 @@ h4.index-writing {
   margin: 20px 0 0 0;
 }
 
-/* line 152, ../sass/style.scss */
+/* line 168, ../sass/style.scss */
 .month-name {
   font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-size: 2rem;
@@ -178,7 +195,7 @@ h4.index-writing {
   float: left;
 }
 
-/* line 160, ../sass/style.scss */
+/* line 176, ../sass/style.scss */
 .day-number {
   font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-size: 2rem;
@@ -188,7 +205,7 @@ h4.index-writing {
   padding: 0 0.5rem 0 0.5rem;
 }
 
-/* line 170, ../sass/style.scss */
+/* line 186, ../sass/style.scss */
 .year-number {
   font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
@@ -201,7 +218,7 @@ h4.index-writing {
 }
 
 /* flash notices */
-/* line 183, ../sass/style.scss */
+/* line 199, ../sass/style.scss */
 .flash.notice {
   background-color: #2ecc71;
   font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
@@ -211,13 +228,13 @@ h4.index-writing {
   letter-spacing: 0.2rem;
 }
 
-/* line 192, ../sass/style.scss */
+/* line 208, ../sass/style.scss */
 .new-post {
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 197, ../sass/style.scss */
+/* line 213, ../sass/style.scss */
 span.new-post {
   font-family: Helvetica 'Neue', Helvetica, Arial, sans-serif;
   padding: 0 0 0 1rem;
@@ -226,14 +243,14 @@ span.new-post {
   text-align: center;
 }
 
-/* line 205, ../sass/style.scss */
+/* line 221, ../sass/style.scss */
 .new-post a, .new-post a:visited {
   color: #444;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-/* line 211, ../sass/style.scss */
+/* line 227, ../sass/style.scss */
 .new-post:before {
   font-family: 'FontAwesome';
   font-size: 5rem;
@@ -242,20 +259,20 @@ span.new-post {
   content: "\f044";
 }
 
-/* line 220, ../sass/style.scss */
+/* line 236, ../sass/style.scss */
 .create-new-post, .create-new-post h1 {
   font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-size: 4rem;
   color: #333;
 }
 
-/* line 226, ../sass/style.scss */
+/* line 242, ../sass/style.scss */
 .create-new-post h1 {
   text-align: center;
 }
 
 /* SHOW => POST PAGE SCSS */
-/* line 234, ../sass/style.scss */
+/* line 250, ../sass/style.scss */
 .underbar {
   height: 0.5rem;
   background: #ea2e49;
@@ -276,12 +293,12 @@ span.new-post {
   /* IE6-9 */
 }
 
-/* line 246, ../sass/style.scss */
+/* line 262, ../sass/style.scss */
 .post-image {
   text-align: center;
 }
 
-/* line 249, ../sass/style.scss */
+/* line 265, ../sass/style.scss */
 .post-image img {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -291,7 +308,7 @@ span.new-post {
   height: auto;
 }
 
-/* line 258, ../sass/style.scss */
+/* line 274, ../sass/style.scss */
 .post-songtitle-songartist span {
   font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-weight: 100;
@@ -305,7 +322,7 @@ span.new-post {
   padding: 0.5rem;
 }
 
-/* line 271, ../sass/style.scss */
+/* line 287, ../sass/style.scss */
 .post-title, .post-author, .post-subtitle {
   font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-weight: 900;
@@ -316,14 +333,14 @@ span.new-post {
   margin: 2rem 0 2rem 0;
 }
 
-/* line 283, ../sass/style.scss */
+/* line 299, ../sass/style.scss */
 .post-author {
   font-weight: 300;
   font-size: 2rem;
   margin: 1rem 0 1rem 0;
 }
 
-/* line 292, ../sass/style.scss */
+/* line 308, ../sass/style.scss */
 .post-subtitle {
   font-weight: 100;
   font-size: 4rem;
@@ -331,7 +348,7 @@ span.new-post {
   color: #999;
 }
 
-/* line 301, ../sass/style.scss */
+/* line 317, ../sass/style.scss */
 .post-body p {
   font-family: 'Vollkorn', serif;
   font-weight: 400;
@@ -340,7 +357,7 @@ span.new-post {
   color: #444;
 }
 
-/* line 311, ../sass/style.scss */
+/* line 327, ../sass/style.scss */
 .post-body p:first-letter {
   float: left;
   color: #333;
@@ -356,18 +373,18 @@ span.new-post {
 
 /* */
 /* LOGIN PAGE SCSS */
-/* line 329, ../sass/style.scss */
+/* line 345, ../sass/style.scss */
 .login-page {
   margin-top: 5rem;
 }
 
-/* line 333, ../sass/style.scss */
+/* line 349, ../sass/style.scss */
 .login-page-logo-area {
   text-align: center;
   margin-top: 5rem;
 }
 
-/* line 338, ../sass/style.scss */
+/* line 354, ../sass/style.scss */
 .login-page input {
   width: 100%;
   border: none;
@@ -377,12 +394,12 @@ span.new-post {
   font-weight: 900;
 }
 
-/* line 348, ../sass/style.scss */
+/* line 364, ../sass/style.scss */
 .login-page input {
   margin-top: 2.5rem;
 }
 
-/* line 352, ../sass/style.scss */
+/* line 368, ../sass/style.scss */
 .login-page label {
   background-color: #ecf0f1;
   color: #222;
@@ -393,7 +410,7 @@ span.new-post {
   font-weight: 100;
 }
 
-/* line 362, ../sass/style.scss */
+/* line 378, ../sass/style.scss */
 .login-page-button input {
   display: inline-block;
   border-radius: 10px;
@@ -410,21 +427,21 @@ span.new-post {
   transition: 0.25s all;
 }
 
-/* line 377, ../sass/style.scss */
+/* line 393, ../sass/style.scss */
 .login-page-button input:hover {
   background-color: #333;
   color: #ecf0f1;
   transition: 0.25s all;
 }
 
-/* line 383, ../sass/style.scss */
+/* line 399, ../sass/style.scss */
 .login-page-button {
   text-align: center;
 }
 
 /* END LOGIN PAGE SCSS */
 /* DEVISE LINKS SCSS */
-/* line 394, ../sass/style.scss */
+/* line 410, ../sass/style.scss */
 span.devise-links {
   font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -434,7 +451,7 @@ span.devise-links {
   text-align: center;
 }
 
-/* line 404, ../sass/style.scss */
+/* line 420, ../sass/style.scss */
 #user_info {
   font-size: 3rem;
   text-transform: uppercase;
@@ -446,7 +463,7 @@ span.devise-links {
   text-align: center;
 }
 
-/* line 415, ../sass/style.scss */
+/* line 431, ../sass/style.scss */
 #user_info a {
   color: #3498db;
   border: 1px solid #dedede;
@@ -455,7 +472,7 @@ span.devise-links {
   transition: .4s all;
 }
 
-/* line 423, ../sass/style.scss */
+/* line 439, ../sass/style.scss */
 #user_info a:hover {
   color: #333;
   border: 1px solid #333;
@@ -463,7 +480,7 @@ span.devise-links {
   text-decoration: none;
 }
 
-/* line 430, ../sass/style.scss */
+/* line 446, ../sass/style.scss */
 .login-btn:before {
   font-family: 'FontAwesome';
   font-size: 5rem;
@@ -473,17 +490,17 @@ span.devise-links {
 }
 
 /* */
-/* line 445, ../sass/style.scss */
+/* line 461, ../sass/style.scss */
 textarea:focus, input:focus {
   outline: 0;
 }
 
-/* line 449, ../sass/style.scss */
+/* line 465, ../sass/style.scss */
 .form-field {
   margin-top: 1rem;
 }
 
-/* line 453, ../sass/style.scss */
+/* line 469, ../sass/style.scss */
 .form-field label {
   font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
@@ -495,12 +512,12 @@ textarea:focus, input:focus {
   letter-spacing: 0.15rem;
 }
 
-/* line 464, ../sass/style.scss */
+/* line 480, ../sass/style.scss */
 .form-field label:focus, .form-field input:focus {
   text-transform: none;
 }
 
-/* line 468, ../sass/style.scss */
+/* line 484, ../sass/style.scss */
 .post-title-field input {
   width: 100%;
   border: none;
@@ -511,7 +528,7 @@ textarea:focus, input:focus {
   text-transform: uppercase;
 }
 
-/* line 478, ../sass/style.scss */
+/* line 494, ../sass/style.scss */
 .post-title-area textarea {
   width: 100%;
   border: 1px solid 333;
@@ -520,7 +537,7 @@ textarea:focus, input:focus {
   font-weight: bold;
 }
 
-/* line 486, ../sass/style.scss */
+/* line 502, ../sass/style.scss */
 .rad-textarea textarea {
   margin: 1rem 0 1rem 0;
   width: 100%;
@@ -535,13 +552,13 @@ textarea:focus, input:focus {
   background-repeat: no-repeat;
 }
 
-/* line 500, ../sass/style.scss */
+/* line 516, ../sass/style.scss */
 .submit-post-button {
   text-align: center;
   margin: 2rem 0 2rem 0;
 }
 
-/* line 505, ../sass/style.scss */
+/* line 521, ../sass/style.scss */
 .submit-post-button input {
   display: inline-block;
   background-color: #f65d5d;
@@ -557,7 +574,7 @@ textarea:focus, input:focus {
   transition: .25s all;
 }
 
-/* line 520, ../sass/style.scss */
+/* line 536, ../sass/style.scss */
 .submit-post-button input:hover {
   background-color: #ccc;
   color: #333;
@@ -566,59 +583,59 @@ textarea:focus, input:focus {
 
 /* LG MD SM XS MEDIA QUERIES  FOR SUBMIT POST BUTTON INPUT */
 @media (min-width: 1200px) {
-  /* line 529, ../sass/style.scss */
+  /* line 545, ../sass/style.scss */
   .submit-post-button input {
     font-size: 8.5rem;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  /* line 532, ../sass/style.scss */
+  /* line 548, ../sass/style.scss */
   .submit-post-button input {
     font-size: 6.5rem;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
-  /* line 535, ../sass/style.scss */
+  /* line 551, ../sass/style.scss */
   .submit-post-button input {
     font-size: 4.5rem;
   }
 }
 @media (max-width: 767px) {
-  /* line 538, ../sass/style.scss */
+  /* line 554, ../sass/style.scss */
   .submit-post-button input {
     font-size: 4rem;
   }
 }
 /* category name scss */
-/* line 545, ../sass/style.scss */
+/* line 561, ../sass/style.scss */
 .post-category {
   display: inline-block;
 }
 
-/* line 549, ../sass/style.scss */
+/* line 565, ../sass/style.scss */
 .category-name {
   display: inline-block;
   padding: 1rem;
 }
 
-/* line 554, ../sass/style.scss */
+/* line 570, ../sass/style.scss */
 .category-name label {
   display: inline-block;
 }
 
-/* line 558, ../sass/style.scss */
+/* line 574, ../sass/style.scss */
 .category-name input {
   display: inline-block;
 }
 
 /* index posts scss */
-/* line 564, ../sass/style.scss */
+/* line 580, ../sass/style.scss */
 .index-writing {
   font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-size: 2rem;
 }
 
-/* line 569, ../sass/style.scss */
+/* line 585, ../sass/style.scss */
 .index-writing p {
   font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
   font-size: 2rem;
