@@ -25,8 +25,8 @@ gem 'rake', '~> 10.3.2'
 # UNCOMMENT WHEN PRODUCTION
 # gem 'mysql2'
 # group :production do
-#     gem 'mysql2'
-# end
+#      gem 'mysql2'
+#  end
 
 # Use SCSS for stylesheets
 gem 'devise'
