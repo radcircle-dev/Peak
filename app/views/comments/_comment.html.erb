@@ -1,6 +1,14 @@
-<div class = "comment">
-    <%= comment.user %>: 
-	<%= raw(comment.content) %> (<%= comment.created_at.strftime('%m/%d/%Y') %>)
+<div class="col-xs-12 col-md-12 col-md-offset-1  comment"> 
 
+    <span class="comment-author">
+    <%= comment.user %> said:
+    </span>
+
+	<p class="comment-text">
+	<%= raw(comment.content) %> 
+	</p>
+
+	<span class="comment-time">
+	<%= comment.created_at.strftime('%m/%d/%Y at %I:%M %p') %>
+	</span>
 </div>
-	

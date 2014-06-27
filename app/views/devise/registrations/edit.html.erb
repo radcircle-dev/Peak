@@ -1,42 +1,56 @@
-<h2 style="font-size:32px;">Edit account</h2>
-<div style="font-size:24px;">
+<div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2 form-text-field"> 
+      <h2>Edit account</h2>
+    </div>
+</div>
+
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %>
-    <br />
-    <%= f.email_field :email, autofocus: false %>
+<div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2 form-text-field"> 
+        <%= f.label :email %>
+          <br />
+        <%= f.email_field :email, autofocus: false %>
   </div>
+</div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-  <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %>
-  </div>
+  <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div>
-    New <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
+<div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2 form-text-field"> 
+    <%= f.label :new_password %> <i>(leave blank if you don't want to change it)</i>
     <br />
     <%= f.password_field :password %>
   </div>
+</div>
 
-  <div>
-    <%= f.label :password_confirmation %>
+<div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2 form-text-field"> 
+    <%= f.label :new_password_confirmation %>
     <br />
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
+</div>
 
-  <div>
+<div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2 form-text-field"> 
     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i>
     <br />
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
+</div>
 
-  <div>
+<div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2 submit-post-button"> 
     <%= f.submit "Update" %>
   </div>
-  
+</div>
+
   <% end %>
 
 <div>
 
-<%= link_to "Back", :back %>
+<!-- <%= link_to "Back", :back %> -->

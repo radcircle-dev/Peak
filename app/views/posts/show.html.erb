@@ -5,11 +5,9 @@
 	</div>
 
 	<div class="row">
-		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- left side -->
-			<div class="col-xs-12 col-md-6 post-songtitle-songartist">
+			<div class="col-xs-12 col-md-6 col-md-offset-3 post-songtitle-songartist">
 				<span><%=@post.artist%></span> <span>-</span> <span>"<%=@post.song%>"</span>
 			</div>
-		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- right side -->
 	</div>	
 
 	<div class="row">
@@ -56,19 +54,18 @@
 	</div>
 
 
-<div class="row">
-<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- left side -->
-			<div class="col-xs-12 col-md-8 post-subtitle">
 
-<section class = "comments">
-	<h2 id = "commentlabel"> Comments (<span id = "num_comments"> <%= @post.comments.size %> </span>)</h2>
+<div class="row comments">
+	<div class="col-xs-12 col-md-6 col-md-offset-3">
+
+<section class ="comments">
+	<h2> <i class="fa fa-comments-o fa-2x"></i> Comments: <span class="comment-number"><%= @post.comments.size %></span></h2>
 	<%if user_signed_in? %>
 		<%= render 'comments/form'%>
 	<%else %>
-		<p><em> you must <%= link_to 'login', new_user_session_path %> to post comments </em></p>
+		<p class="sign-in-to-comment">You must <%= link_to 'login', new_user_session_path %> to post comments</p>
 	<%end%>
 	<%= render partial: 'comments/comment', collection: @post.comments.order('created_at desc') %>
 </section>
 
-</div>
-</div>
+</div></div>

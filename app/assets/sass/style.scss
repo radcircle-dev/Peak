@@ -19,6 +19,33 @@ body {font-size: 62.5%}
 	text-rendering: geometricPrecision;
 }
 
+.slow-fade {
+	-webkit-transition: .4s all;
+  	-moz-transition: .4s all;
+  	-o-transition: .4s all;
+	transition: .4s all;
+}
+
+.form-text-field input {
+	width: 100%;
+	border-top: none; border-left: none; border-right: none;
+	border-bottom: 1px solid #333;
+	font-family: $stdfont;
+	font-size: 4rem;
+	margin-bottom: 2rem;
+}
+
+.form-text-field label {
+	font-family: $stdmont;
+	font-size: 2rem;
+	letter-spacing: 0.2rem;
+	color: #ccc;
+}
+
+.form-text-field {
+	font-size: 1.5rem;
+}
+
 .navigation-bar {
 	background-color: #fff;
 }
@@ -43,7 +70,20 @@ body {font-size: 62.5%}
 		padding: 0 0.5rem 0 0.5rem;
 	}
 		.navigation-bar h2:hover {
+			color: #333;
+		}
+
+		/* active link transitions */
+
+		.navigation-bar h2 a, .navigation-bar h2 a:visited {
+			@extend .slow-fade;
+			color: #666;
+		}
+
+		.navigation-bar h2 a:hover {
+			@extend .slow-fade;
 			color: #3498db;
+			text-decoration: none;
 		}
 
 		.navigation-bar h2:first-of-type {
@@ -118,7 +158,8 @@ body {font-size: 62.5%}
 
 	
 .home-btn {
-	padding: 0 0.5rem 0 0;
+	padding: 0 0.8rem 0 0.8rem;
+	line-height: 0.8rem;
 }
 
 
@@ -159,40 +200,46 @@ body {font-size: 62.5%}
 /* index dates and stuff */
 
 .date-container {
-	border: 1px solid #888;
+	border: 1px solid #ccc;
 	display: inline-block;
-	padding: 0.2rem;
+	padding: 0.5rem 0.4rem 0.5rem 0.2rem;
 	margin: 20px 0 0 0;
 }
 
-.month-name {
-	font-family: $stdmont;
+.day-name {
+	font-family: $stdfont;
 	font-size: 2rem;
-	font-weight: 100;
+	font-weight: 300;
 	color: #333;
-	float: left;
+	padding: 0 0.2rem 0 0.2rem;
+	display: inline-block;
+	text-transform: uppercase;
 }
 
 .day-number {
 	font-family: $stdmont;
 	font-size: 2rem;
-	font-weight: 100;
+	font-weight: 700;
 	color: #333;
-	float: left;
 	padding: 0 0.5rem 0 0.5rem;
+	background-color: #fff;
+	border-radius: 1rem;
+	display: inline-block;
+		text-transform: uppercase;
+		text-align: center;
 }
 
-
-.year-number {
+.month-name {
 	font-family: $stdfont;
-	font-weight: 100;
-	display: block;
-	text-align: right;
-	clear: left;
-	color: #e74c3c;
 	font-size: 2rem;
-	letter-spacing: 0.2rem;
+	font-weight: 300;
+	color: #333;
+		display:inline-block;
+		padding: 0 0.2rem 0 0.2rem;
+			text-transform: uppercase;
 }
+
+
 
 /* flash notices */
 
@@ -262,6 +309,7 @@ span.new-post {
 .post-image {
 	text-align: center;
 }
+
 .post-image img {
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -334,11 +382,73 @@ span.new-post {
 	padding-left: 3px; 
 	font-family: "Times New Roman", serif;
 	text-rendering: optimizeLegibility;
-	text-rendering: geometricPrecision;
  }
-/* */
 
+/*
+p:first-child:first-letter {  
+    font-size: 50px;  
+}  
+ p:first-child:first-line {  
+    font-weight: bold;  
+}  
+*/
 
+/* &COMMENTS */
+
+.comments {
+	background-color: #ecf0f1;
+}
+
+.comment {
+	margin: 1.5rem 0 1.5rem 0;
+}
+
+.comment-author {
+	font-family: $stdmont;
+	font-size: 3rem;
+	letter-spacing: 0.3rem;
+	text-transform: uppercase;
+	display: block;
+	color: #666;
+	text-align: left;
+}
+
+.comment-text {
+	font-family: $stdfont;
+	font-size: 2.3rem;
+	line-height: 3.6rem;
+	color: #222;
+	font-weight: 300;
+	display: block;
+	text-align: left;
+	text-transform: none;
+	overflow: auto;
+}
+
+.comment-time {
+	font-family: $stdmont;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	display: block;
+	text-align: left;
+	color: #666;
+}
+
+/* SCSS FOR THE NUMBER OF COMMENTS */
+.comment-number {
+	font-family: $stdmont;
+	font-size: 2rem;
+	color: #fff;
+	background-color: #333;
+	border-radius: 1rem;
+	padding: 0.75rem;
+}
+
+.sign-in-to-comment {
+	font-family: $stdmont;
+	font-size: 2rem;
+	color: #333;
+}
 
 /* LOGIN PAGE SCSS */
 
