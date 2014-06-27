@@ -7,6 +7,7 @@
   <link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
   <%= csrf_meta_tags %>
 </head>
+<body>
 
 <div class="row navigation-bar">
 			<div class="col-xs-12 col-md-8 col-md-offset-2 navigation-bar">
@@ -31,7 +32,7 @@
 			</div>
 </div>
 
-<body>
+
 <section id = "main">
 <% [:notice, :alert].each do |level| %>
 	<% if flash[level] %>
