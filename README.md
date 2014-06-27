@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/radcircle-dev/Peak.png)](https://codeclimate.com/github/radcircle-dev/Peak)
+
 # Radcircle Peak
 __This section should contain the purpose / intent of Radcircle Peak__
 
