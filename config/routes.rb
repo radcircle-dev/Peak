@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+
   devise_for :users
   resources :users, :only => [:show]
   
@@ -14,6 +15,9 @@ Rails.application.routes.draw do
   resources :basecamps
 
   root "posts#index"
+
+  # Dashboard
+  get 'dashboard' => 'dashboard#index'
 
   # Pages
   get 'team' => 'pages#team'
