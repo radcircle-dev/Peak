@@ -49,22 +49,22 @@
 </div>
 
 
-<section id = "main">
 <% [:notice, :alert].each do |level| %>
 	<% if flash[level] %>
 		<div class = "flash <%= level%>"><%= flash[level] %> </div>
 	<%end%>
 <%end%>
-</section>
 
-<div class="container-fluid">
-<%= yield %>
-<% if admin_signed_in? %>
-	<%= admin_logged_in_msg %>
-	<%else%>
-	<%= user_logged_in_msg %>
-<%end%>
-</div>
+<section id="main">
+  <div class="container-fluid">
+  <%= yield %>
+  <% if admin_signed_in? %>
+    <%= admin_logged_in_msg %>
+    <%else%>
+    <%= user_logged_in_msg %>
+  <%end%>
+  </div>
+</section>
 
 <div class="col-xs-12 col-md-10 col-md-offset-1">
 <a href="https://codeclimate.com/github/radcircle-dev/Peak"><img src="https://codeclimate.com/github/radcircle-dev/Peak.png" /></a>
