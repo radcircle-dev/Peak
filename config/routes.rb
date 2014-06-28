@@ -1,13 +1,27 @@
 Rails.application.routes.draw do
   
+
+  devise_for :users
+  resources :users, :only => [:show]
+  
   #get "posts/index"
   #get "posts/new"
   #get "posts/show"
 
   devise_for :admins
-  resources :welcome
   resources :posts
+  resources :categories
+  resources :comments
+  resources :basecamps
+
   root "posts#index"
+
+  # Dashboard
+  get 'dashboard' => 'dashboard#index'
+
+  # Pages
+  get 'team' => 'pages#team'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

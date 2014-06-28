@@ -1,0 +1,7 @@
+
+<h3>Comment on this</h3>
+<%= form_for(@comment, remote:true) do |f| %>
+	 <%= f.hidden_field :post_id %>
+	<div class="comments-box"><%= f.text_area :content, placeholder: "What do you think?" %></div>
+	<div class="comments-box-submit-btn"><%= submit_tag 'Add Comment' %> </div>
+<% end %>

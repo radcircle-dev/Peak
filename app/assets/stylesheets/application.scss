@@ -1,0 +1,776 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+
+/* ideally we should see the navigation bar, coalescing of different kinds of posts, sign up, log in, etc etc .. */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,900);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
+
+$stdfont: 'Roboto', Helvetica 'Neue', Helvetica, Arial, sans-serif;
+$stdmont: 'Montserrat', Helvetica 'Neue', Helvetica, Arial, sans-serif;
+
+html, body {height: 100%} /* FOR 100% PAGE FILL */
+body {font-size: 62.5%}
+
+.fill { min-height: 100%; height: 100%} /* FOR 100% PAGE FILL */
+
+.text-render {
+	text-rendering: optimizeLegibility;
+	text-rendering: geometricPrecision;
+}
+
+.slow-fade {
+	-webkit-transition: .4s all;
+  	-moz-transition: .4s all;
+  	-o-transition: .4s all;
+	transition: .4s all;
+}
+
+.form-text-field input {
+	width: 100%;
+	border-top: none; border-left: none; border-right: none;
+	border-bottom: 1px solid #333;
+	font-family: $stdfont;
+	font-size: 4rem;
+	margin-bottom: 2rem;
+}
+
+.form-text-field label {
+	font-family: $stdmont;
+	font-size: 2rem;
+	letter-spacing: 0.2rem;
+	color: #ccc;
+}
+
+.form-text-field {
+	font-size: 1.5rem;
+}
+
+.navigation-bar {
+	background-color: #fff;
+}
+
+	.navigation-bar h1 {
+		font-family: $stdfont;
+		font-size: 2.3rem;
+		font-weight: 900;
+		color: #222;
+		letter-spacing: 0.23rem;
+		text-transform: uppercase;
+		display: inline-block;
+	}
+
+	.navigation-bar h2 {
+		font-family: $stdmont;
+		color: #888;
+		font-size: 1.6rem;
+		display: inline-block;
+		text-transform: uppercase;
+		letter-spacing: 0.16rem;
+		padding: 0 0.5rem 0 0.5rem;
+	}
+		.navigation-bar h2:hover {
+			color: #333;
+		}
+
+		/* active link transitions */
+
+		.navigation-bar h2 a, .navigation-bar h2 a:visited {
+			@extend .slow-fade;
+			color: #666;
+		}
+
+		.navigation-bar h2 a:hover {
+			@extend .slow-fade;
+			color: #3498db;
+			text-decoration: none;
+		}
+
+		.navigation-bar h2:first-of-type {
+			padding-left: 2rem;
+		}
+
+.login-nav-btn {
+			padding: 0 0.5rem 0 0.5rem;
+			text-align: right;
+}
+
+	.login-nav-btn:before {
+			font-family: 'FontAwesome';
+			font-size: 2rem;
+			color: #222;
+			padding: 0 0.5rem 0 0.5rem;
+			line-height: 2rem;
+       		content: "\f090";
+       		vertical-align:middle;
+	}
+
+.signup-nav-btn {
+			padding: 0 0.5rem 0 0.5rem;
+			text-align: right;
+}
+
+	.signup-nav-btn:before {
+			font-family: 'FontAwesome';
+			font-size: 2rem;
+			color: #222;
+			padding: 0 0.5rem 0 0.5rem;
+			line-height: 2rem;
+       		content: "\f007";
+       		vertical-align:middle;
+	}
+
+.edit-nav-btn {
+			padding: 0 0.5rem 0 0.5rem;
+			text-align: right;
+}
+
+	.edit-nav-btn:before {
+			font-family: 'FontAwesome';
+			font-size: 2rem;
+			color: #222;
+			padding: 0 0.5rem 0 0.5rem;
+			line-height: 2rem;
+       		content: "\f013";
+       		vertical-align:middle;
+	}
+
+
+.logout-nav-btn:before {
+			font-family: 'FontAwesome';
+			font-size: 2rem;
+			color: #222;
+			padding: 0 0.5rem 0 0.5rem;
+			line-height: 2rem;
+       		content: "\f08b";
+       		vertical-align:middle;
+}
+
+.create-nav-btn:before {
+			font-family: 'FontAwesome';
+			font-size: 2rem;
+			color: #222;
+			padding: 0 0.5rem 0 0.5rem;
+			line-height: 2rem;
+       		content: "\f044";
+       		vertical-align:middle;
+}
+
+	
+.home-btn {
+	padding: 0 0.8rem 0 0.8rem;
+	line-height: 0.8rem;
+}
+
+
+/* end of buttons ^ */
+
+
+.posts-index { /* colors the bg behind the list of posts on the index */
+	background-color: #DADFE1;
+}
+
+.index-writing {
+	font-family: $stdfont;
+	font-size: 3rem;
+	overflow: hidden;
+	display: block;
+}
+
+	.index-writing img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+
+	}
+
+	h3.index-writing {
+		font-size: 4rem;
+		padding: 0.25rem 0 0.25rem 0;
+		font-weight: 900;
+	}
+
+	h4.index-writing {
+		font-size: 2.5rem;
+		font-weight: 300;
+	}
+
+
+
+/* index dates and stuff */
+
+.date-container {
+	border: 1px solid #ccc;
+	display: inline-block;
+	padding: 0.5rem 0.4rem 0.5rem 0.2rem;
+	margin: 20px 0 0 0;
+}
+
+.day-name {
+	font-family: $stdfont;
+	font-size: 2rem;
+	font-weight: 300;
+	color: #333;
+	padding: 0 0.2rem 0 0.2rem;
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+.day-number {
+	font-family: $stdmont;
+	font-size: 2rem;
+	font-weight: 700;
+	color: #333;
+	padding: 0 0.5rem 0 0.5rem;
+	background-color: #fff;
+	border-radius: 1rem;
+	display: inline-block;
+		text-transform: uppercase;
+		text-align: center;
+}
+
+.month-name {
+	font-family: $stdfont;
+	font-size: 2rem;
+	font-weight: 300;
+	color: #333;
+		display:inline-block;
+		padding: 0 0.2rem 0 0.2rem;
+			text-transform: uppercase;
+}
+
+
+
+/* flash notices */
+
+.flash.notice {
+	background-color: #2ecc71;
+	font-family: $stdfont;
+	font-size: 4rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.2rem;
+}
+
+.new-post {
+	margin: 0 auto;
+	text-align: center;
+}
+
+span.new-post {
+	font-family: Helvetica 'Neue', Helvetica, Arial, sans-serif;
+	padding: 0 0 0 1rem;
+	font-size: 5rem;
+		margin: 0 auto;
+	text-align: center;
+}
+
+.new-post a, .new-post a:visited {
+	color: #444;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.new-post:before {
+		font-family: 'FontAwesome';
+		font-size: 5rem;
+		color: #333;
+		padding: 0 0 0 0.5rem;
+        content: "\f044";
+}
+
+
+.create-new-post {
+	font-family: $stdfont;
+	font-size: 4rem;
+	color: #333;
+}
+
+	.create-new-post h1 {
+		@extend .create-new-post;
+		text-align: center;
+	}
+
+/* SHOW => POST PAGE SCSS */
+
+
+.underbar {
+	height: 0.5rem;
+	background: #ea2e49; /* Old browsers */
+	background: -moz-linear-gradient(left,  #ea2e49 0%, #77c4d3 50%, #f6f792 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ea2e49), color-stop(50%,#77c4d3), color-stop(100%,#f6f792)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #ea2e49 0%,#77c4d3 50%,#f6f792 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #ea2e49 0%,#77c4d3 50%,#f6f792 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #ea2e49 0%,#77c4d3 50%,#f6f792 100%); /* IE10+ */
+	background: linear-gradient(to right,  #ea2e49 0%,#77c4d3 50%,#f6f792 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea2e49', endColorstr='#f6f792',GradientType=1 ); /* IE6-9 */
+}
+
+.post-image {
+	text-align: center;
+}
+
+.post-image img {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+.post-songtitle-songartist span {
+	font-family: $stdfont;
+	font-weight: 100;
+	background-color: #333;
+	color: #fff;
+	font-size: 2rem;
+	margin: 1rem 0 1rem 0;
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	padding: 0.5rem;
+}
+
+.post-title {
+	font-family: $stdfont;
+	font-weight: 900;
+	font-size: 8rem;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+	margin: 2rem 0 2rem 0;
+	@extend .text-render;
+}
+
+
+.post-author {
+	@extend .post-title;
+	font-weight: 300;
+	font-size: 2rem;
+	margin: 1rem 0 1rem 0;
+	@extend .text-render;
+}
+
+
+.post-subtitle {
+	@extend .post-title;
+	font-weight: 100;
+	font-size: 4rem;
+	margin: 2rem 0 2rem 0;
+	color: #999;
+	@extend .text-render;
+}
+
+.post-body p {
+	font-family: 'Vollkorn', serif;
+	font-weight: 400;
+	font-size: 2.3rem;
+	line-height: 3.9rem;
+	color: #444;
+	@extend .text-render;
+
+}
+
+.post-body p:first-letter { 
+	float: left; 
+	color: #333; 
+	font-size: 75px; 
+	line-height: 60px; 
+	padding-top: 4px; 
+	padding-right: 8px; 
+	padding-left: 3px; 
+	font-family: "Times New Roman", serif;
+	text-rendering: optimizeLegibility;
+ }
+
+/*
+p:first-child:first-letter {  
+    font-size: 50px;  
+}  
+ p:first-child:first-line {  
+    font-weight: bold;  
+}  
+*/
+
+/* &COMMENTS */
+
+.comments {
+	background-color: #ecf0f1;
+}
+
+	.comments-box textarea {
+		background-color: #fff;
+		width: 100%;
+		border: none;
+		height: 10rem;
+		font-family: $stdfont;
+		font-size: 2.1rem;
+		line-height: 3.6rem;
+		padding: 0.21rem;
+		color: #333;
+	}
+
+	.comments-box-submit-btn input {
+		width: 100%;
+		background-color: #2ecc71;
+		height: 3rem;
+		font-family: $stdmont;
+		font-size: 2rem;
+		letter-spacing: 0.2rem;
+		color: #333;
+		border: none;
+		text-transform: uppercase;
+		@extend .slow-fade;
+		margin-bottom: 2.5rem;
+	}
+
+		.comments-box-submit-btn input:hover {
+			background-color: #3498db;
+			@extend .slow-fade;
+		}
+
+.comment {
+
+}
+
+.comment-author {
+	font-family: $stdmont;
+	font-size: 3rem;
+	letter-spacing: 0.3rem;
+	text-transform: uppercase;
+	display: block;
+	color: #666;
+	text-align: left;
+	margin-top: 2.5rem;
+}
+
+.comment-text {
+	font-family: $stdfont;
+	font-size: 2.3rem;
+	line-height: 3.6rem;
+	color: #222;
+	font-weight: 300;
+	display: block;
+	text-align: left;
+	text-transform: none;
+	overflow: auto;
+}
+
+.comment-time {
+	font-family: $stdmont;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	display: block;
+	text-align: left;
+	color: #666;
+}
+
+/* SCSS FOR THE NUMBER OF COMMENTS */
+.comment-number {
+	font-family: $stdmont;
+	font-size: 2rem;
+	color: #fff;
+	background-color: #333;
+	border-radius: 1rem;
+	padding: 0.75rem;
+}
+
+.sign-in-to-comment {
+	font-family: $stdmont;
+	font-size: 2rem;
+	color: #333;
+}
+
+/* LOGIN PAGE SCSS */
+
+.login-page {
+	margin-top: 5rem;
+} 
+
+.login-page-logo-area {
+	text-align: center;
+	margin-top: 5rem;
+}
+
+.login-page input {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #333;
+	font-family: $stdfont;
+	font-size: 4rem;
+	font-weight: 900;
+
+}
+
+	.login-page input {
+		margin-top: 2.5rem;
+	}
+
+	.login-page label {
+		background-color: #ecf0f1;
+		color: #222;
+		font-size: 2rem;
+		letter-spacing: 0.4rem;
+		text-transform: uppercase;
+		padding: 1rem;
+		font-weight: 100;
+	}
+
+	.login-page-button input {
+		display: inline-block;
+		border-radius: 10px;
+		background-color: #ecf0f1;
+		font-family: $stdmont;
+		border: none;
+		text-rendering: optimizeLegibility;
+		letter-spacing: 0.3rem;
+		font-size: 3rem;
+		font-weight: 400;
+		padding: 1.5rem;
+		color: #333;
+		text-align: center;
+		transition: 0.25s all;
+	}
+		.login-page-button input:hover {
+			background-color: #333;
+			color: #ecf0f1;
+			transition: 0.25s all;
+		}
+	
+	.login-page-button {
+		text-align: center;
+
+	}
+
+
+/* END LOGIN PAGE SCSS */
+
+
+/* DEVISE LINKS SCSS */
+
+span.devise-links {
+	font-family: $stdmont;
+	font-weight: 400;
+	font-size: 2rem;
+	color: #333;
+	display: inline-block;
+	text-align: center;
+}
+
+
+#user_info {
+	font-size: 3rem;
+	text-transform: uppercase;
+	letter-spacing: 0.3rem;
+	color: #ccc;
+	font-family: $stdfont;
+	font-weight: 900;
+	padding: 1.5rem 0 1.5rem 0;
+	text-align: center;
+}
+
+	#user_info a {
+		color: #3498db;
+		border: 1px solid #dedede;
+		border-radius: 0.3rem;
+		padding: 0.6rem;
+		transition: .4s all;
+	}
+
+		#user_info a:hover {
+			color: #333;
+			border: 1px solid #333;
+			transition: .4s all;
+			text-decoration: none;
+		}
+
+		.login-btn:before {
+		font-family: 'FontAwesome';
+		font-size: 5rem;
+		color: #333;
+		padding: 0 0 0 0.5rem;
+        content: "\f090";
+		}
+
+		.logout-btn {}
+		.register-btn {}
+
+/* */
+
+
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+.form-field {
+	margin-top: 1rem;
+}
+
+	.form-field label {
+		font-family: $stdfont;
+		font-size: 1.5rem;
+		text-transform: uppercase;
+		font-weight: 100;
+		background-color: #666;
+		color: #fff;
+		padding: 5px;
+		letter-spacing: 0.15rem;
+	}
+
+		.form-field label:focus, .form-field input:focus {
+			text-transform: none;
+		}
+
+.post-title-field input {
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #333;
+	font-family: $stdfont;
+	font-size: 4rem;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+.post-title-area textarea {
+	width: 100%;
+	border: 1px solid 333;
+	font-family: Helvetica, arial, sans-serif;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+.rad-textarea textarea {
+	margin: 1rem 0 1rem 0;
+	width: 100%;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: $stdfont;
+	font-size: 1.6rem;
+	word-spacing: 0.16rem;
+	background-image: url(http://i.imgur.com/RcrYiFC.png);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+.submit-post-button {
+	text-align: center;
+	margin: 2rem 0 2rem 0;
+}
+
+.submit-post-button input {
+	display: inline-block;
+	background-color: #f65d5d;
+	color: #333;
+	padding: 0.7rem;
+	font-family: $stdmont;
+	font-weight: 900;
+	letter-spacing: 0.35rem;
+	font-size: 7rem;
+	border: none;
+	text-transform: uppercase;
+	margin-top: 1rem 0 1rem 0;
+	transition: .25s all;
+}
+
+	.submit-post-button input:hover {
+		background-color: #ccc;
+		color: #333;
+		transition: .25s all;
+	}
+
+/* LG MD SM XS MEDIA QUERIES  FOR SUBMIT POST BUTTON INPUT */
+
+@media (min-width: 1200px) {
+	.submit-post-button input {font-size: 8.5rem;}
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.submit-post-button input {font-size: 6.5rem;}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+	.submit-post-button input {font-size: 4.5rem;}
+}
+@media (max-width: 767px) {
+	.submit-post-button input {font-size: 4rem;}
+}
+
+
+
+/* category name scss */
+
+.post-category {
+	display: inline-block;
+}
+
+.category-name {
+	display: inline-block;
+	padding: 1rem;
+}
+
+.category-name label {
+	display: inline-block;
+}
+
+.category-name input {
+	display: inline-block;
+}
+
+/* index posts scss */
+
+.index-writing {
+	font-family: $stdfont;
+	font-size: 2rem;
+}
+
+	.index-writing p {
+		font-family: $stdfont;
+		font-size: 2rem;
+		clear: both;
+	}
+
+
+/* &SEARCH */
+
+.search {
+	line-height: auto;
+}
+
+.search:hover {
+	cursor: pointer;
+}
+
+.search-bar {
+	display: none;
+	width: 100%;
+	height: 5rem;
+	margin: 1rem;
+}
+
+.search-bar input {
+	width: 100%;
+	border-top: none; border-left: none; border-right: none;
+	border-bottom: 1px solid #333;
+	font-family: $stdfont;
+	font-size: 4rem;
+}
+
+.team-member{
+  float: left;
+  width: 33.3333%;
+}
+

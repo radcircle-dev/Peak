@@ -1,11 +1,71 @@
-<h1>Posts#show</h1>
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+	<div class="row fill">
+	<div class="col-xs-12 col-md-12 post-image fill">
+				<img src=<%=@post.author %>>
+	</div>
+	</div>
+
+	<div class="row">
+			<div class="col-xs-12 col-md-6 col-md-offset-3 post-songtitle-songartist">
+				<span><%=@post.artist%></span> <span>-</span> <span>"<%=@post.song%>"</span>
+			</div>
+	</div>	
+
+	<div class="row">
+		<div class="col-xs-12 col-md-12">
+			<%= raw(@post.link) %> <!-- song link -->
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- left side -->
+			<div class="col-xs-12 col-md-8 post-title">
+				<%= @post.title %>
+			</div>
+		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- right side -->
+	</div>
+
+	<div class="row">
+	<div class="col-xs-12 col-md-12 underbar">
+	</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- left side -->
+			<div class="col-xs-12 col-md-6 post-author">
+				<%= author_(@post) %>
+			</div>
+		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- right side -->
+	</div>
  
-<p>
-  <strong>Text:</strong>
-  <%= @post.body %>
-</p>
-<h2> <%= link_to 'Home', posts_path %> </h2>
+ 	<div class="row">
+		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- left side -->
+			<div class="col-xs-12 col-md-8 post-subtitle">
+				<%= @post.subtitle %> 
+			</div>
+		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- right side -->
+	</div>
+
+ 	<div class="row">
+		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- left side -->
+			<div class="col-xs-12 col-md-6 post-body">
+				<p><%= simple_format @post.body %></p>
+			</div>
+		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- right side -->
+	</div>
+
+
+
+<div class="row comments">
+	<div class="col-xs-12 col-md-6 col-md-offset-3">
+
+<section class ="comments">
+	<h2> <i class="fa fa-comments-o fa-2x"></i> Comments: <span class="comment-number"><%= @post.comments.size %></span></h2>
+	<%if user_signed_in? %>
+		<%= render 'comments/form'%>
+	<%else %>
+		<p class="sign-in-to-comment">You must <%= link_to 'login', new_user_session_path %> to post comments</p>
+	<%end%>
+	<%= render partial: 'comments/comment', collection: @post.comments.order('created_at desc') %>
+</section>
+
+</div></div>

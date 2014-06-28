@@ -1,0 +1,763 @@
+/* SCSS for Pre-alpha E */
+/* ideally we should see the navigation bar, coalescing of different kinds of posts, sign up, log in, etc etc .. */
+@import url(http://fonts.googleapis.com/css?family=Roboto:100,300,900);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Vollkorn);
+/* line 12, ../sass/style.scss */
+html, body {
+  height: 100%;
+}
+
+/* FOR 100% PAGE FILL */
+/* line 13, ../sass/style.scss */
+body {
+  font-size: 62.5%;
+}
+
+/* line 15, ../sass/style.scss */
+.fill {
+  min-height: 100%;
+  height: 100%;
+}
+
+/* FOR 100% PAGE FILL */
+/* line 17, ../sass/style.scss */
+.text-render, .post-title, .post-author, .post-subtitle, .post-body p {
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+}
+
+/* line 22, ../sass/style.scss */
+.slow-fade, .navigation-bar h2 a, .navigation-bar h2 a:visited, .navigation-bar h2 a:hover {
+  -webkit-transition: .4s all;
+  -moz-transition: .4s all;
+  -o-transition: .4s all;
+  transition: .4s all;
+}
+
+/* line 29, ../sass/style.scss */
+.form-text-field input {
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #333;
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+/* line 38, ../sass/style.scss */
+.form-text-field label {
+  font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  color: #ccc;
+}
+
+/* line 45, ../sass/style.scss */
+.form-text-field {
+  font-size: 1.5rem;
+}
+
+/* line 49, ../sass/style.scss */
+.navigation-bar {
+  background-color: #fff;
+}
+
+/* line 53, ../sass/style.scss */
+.navigation-bar h1 {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.3rem;
+  font-weight: 900;
+  color: #222;
+  letter-spacing: 0.23rem;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* line 63, ../sass/style.scss */
+.navigation-bar h2 {
+  font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  color: #888;
+  font-size: 1.6rem;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.16rem;
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+/* line 72, ../sass/style.scss */
+.navigation-bar h2:hover {
+  color: #333;
+}
+
+/* active link transitions */
+/* line 78, ../sass/style.scss */
+.navigation-bar h2 a, .navigation-bar h2 a:visited {
+  color: #666;
+}
+
+/* line 83, ../sass/style.scss */
+.navigation-bar h2 a:hover {
+  color: #3498db;
+  text-decoration: none;
+}
+
+/* line 89, ../sass/style.scss */
+.navigation-bar h2:first-of-type {
+  padding-left: 2rem;
+}
+
+/* line 93, ../sass/style.scss */
+.login-nav-btn {
+  padding: 0 0.5rem 0 0.5rem;
+  text-align: right;
+}
+
+/* line 98, ../sass/style.scss */
+.login-nav-btn:before {
+  font-family: 'FontAwesome';
+  font-size: 2rem;
+  color: #222;
+  padding: 0 0.5rem 0 0.5rem;
+  line-height: 2rem;
+  content: "\f090";
+  vertical-align: middle;
+}
+
+/* line 108, ../sass/style.scss */
+.signup-nav-btn {
+  padding: 0 0.5rem 0 0.5rem;
+  text-align: right;
+}
+
+/* line 113, ../sass/style.scss */
+.signup-nav-btn:before {
+  font-family: 'FontAwesome';
+  font-size: 2rem;
+  color: #222;
+  padding: 0 0.5rem 0 0.5rem;
+  line-height: 2rem;
+  content: "\f007";
+  vertical-align: middle;
+}
+
+/* line 123, ../sass/style.scss */
+.edit-nav-btn {
+  padding: 0 0.5rem 0 0.5rem;
+  text-align: right;
+}
+
+/* line 128, ../sass/style.scss */
+.edit-nav-btn:before {
+  font-family: 'FontAwesome';
+  font-size: 2rem;
+  color: #222;
+  padding: 0 0.5rem 0 0.5rem;
+  line-height: 2rem;
+  content: "\f013";
+  vertical-align: middle;
+}
+
+/* line 139, ../sass/style.scss */
+.logout-nav-btn:before {
+  font-family: 'FontAwesome';
+  font-size: 2rem;
+  color: #222;
+  padding: 0 0.5rem 0 0.5rem;
+  line-height: 2rem;
+  content: "\f08b";
+  vertical-align: middle;
+}
+
+/* line 149, ../sass/style.scss */
+.create-nav-btn:before {
+  font-family: 'FontAwesome';
+  font-size: 2rem;
+  color: #222;
+  padding: 0 0.5rem 0 0.5rem;
+  line-height: 2rem;
+  content: "\f044";
+  vertical-align: middle;
+}
+
+/* line 160, ../sass/style.scss */
+.home-btn {
+  padding: 0 0.8rem 0 0.8rem;
+  line-height: 0.8rem;
+}
+
+/* end of buttons ^ */
+/* line 169, ../sass/style.scss */
+.posts-index {
+  /* colors the bg behind the list of posts on the index */
+  background-color: #DADFE1;
+}
+
+/* line 173, ../sass/style.scss */
+.index-writing {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 3rem;
+  overflow: hidden;
+  display: block;
+}
+
+/* line 180, ../sass/style.scss */
+.index-writing img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* line 187, ../sass/style.scss */
+h3.index-writing {
+  font-size: 4rem;
+  padding: 0.25rem 0 0.25rem 0;
+  font-weight: 900;
+}
+
+/* line 193, ../sass/style.scss */
+h4.index-writing {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+/* index dates and stuff */
+/* line 202, ../sass/style.scss */
+.date-container {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 0.5rem 0.4rem 0.5rem 0.2rem;
+  margin: 20px 0 0 0;
+}
+
+/* line 209, ../sass/style.scss */
+.day-name {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #333;
+  padding: 0 0.2rem 0 0.2rem;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+/* line 219, ../sass/style.scss */
+.day-number {
+  font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  padding: 0 0.5rem 0 0.5rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* line 232, ../sass/style.scss */
+.month-name {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #333;
+  display: inline-block;
+  padding: 0 0.2rem 0 0.2rem;
+  text-transform: uppercase;
+}
+
+/* flash notices */
+/* line 246, ../sass/style.scss */
+.flash.notice {
+  background-color: #2ecc71;
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+}
+
+/* line 255, ../sass/style.scss */
+.new-post {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 260, ../sass/style.scss */
+span.new-post {
+  font-family: Helvetica 'Neue', Helvetica, Arial, sans-serif;
+  padding: 0 0 0 1rem;
+  font-size: 5rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* line 268, ../sass/style.scss */
+.new-post a, .new-post a:visited {
+  color: #444;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* line 274, ../sass/style.scss */
+.new-post:before {
+  font-family: 'FontAwesome';
+  font-size: 5rem;
+  color: #333;
+  padding: 0 0 0 0.5rem;
+  content: "\f044";
+}
+
+/* line 283, ../sass/style.scss */
+.create-new-post, .create-new-post h1 {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 4rem;
+  color: #333;
+}
+
+/* line 289, ../sass/style.scss */
+.create-new-post h1 {
+  text-align: center;
+}
+
+/* SHOW => POST PAGE SCSS */
+/* line 297, ../sass/style.scss */
+.underbar {
+  height: 0.5rem;
+  background: #ea2e49;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #ea2e49 0%, #77c4d3 50%, #f6f792 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ea2e49), color-stop(50%, #77c4d3), color-stop(100%, #f6f792));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #ea2e49 0%, #77c4d3 50%, #f6f792 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #ea2e49 0%, #77c4d3 50%, #f6f792 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #ea2e49 0%, #77c4d3 50%, #f6f792 100%);
+  /* IE10+ */
+  background: linear-gradient(to right, #ea2e49 0%, #77c4d3 50%, #f6f792 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ea2e49', endColorstr='#f6f792',GradientType=1 );
+  /* IE6-9 */
+}
+
+/* line 309, ../sass/style.scss */
+.post-image {
+  text-align: center;
+}
+
+/* line 313, ../sass/style.scss */
+.post-image img {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 322, ../sass/style.scss */
+.post-songtitle-songartist span {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  background-color: #333;
+  color: #fff;
+  font-size: 2rem;
+  margin: 1rem 0 1rem 0;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  padding: 0.5rem;
+}
+
+/* line 335, ../sass/style.scss */
+.post-title, .post-author, .post-subtitle {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  margin: 2rem 0 2rem 0;
+}
+
+/* line 347, ../sass/style.scss */
+.post-author {
+  font-weight: 300;
+  font-size: 2rem;
+  margin: 1rem 0 1rem 0;
+}
+
+/* line 356, ../sass/style.scss */
+.post-subtitle {
+  font-weight: 100;
+  font-size: 4rem;
+  margin: 2rem 0 2rem 0;
+  color: #999;
+}
+
+/* line 365, ../sass/style.scss */
+.post-body p {
+  font-family: 'Vollkorn', serif;
+  font-weight: 400;
+  font-size: 2.3rem;
+  line-height: 3.9rem;
+  color: #444;
+}
+
+/* line 375, ../sass/style.scss */
+.post-body p:first-letter {
+  float: left;
+  color: #333;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+  font-family: "Times New Roman", serif;
+  text-rendering: optimizeLegibility;
+}
+
+/*
+p:first-child:first-letter {  
+    font-size: 50px;  
+}  
+ p:first-child:first-line {  
+    font-weight: bold;  
+}  
+*/
+/* &COMMENTS */
+/* line 398, ../sass/style.scss */
+.comments {
+  background-color: #ecf0f1;
+}
+
+/* line 402, ../sass/style.scss */
+.comment {
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+/* line 406, ../sass/style.scss */
+.comment-author {
+  font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  display: block;
+  color: #666;
+  text-align: left;
+}
+
+/* line 416, ../sass/style.scss */
+.comment-text {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.3rem;
+  line-height: 3.6rem;
+  color: #222;
+  font-weight: 300;
+  display: block;
+  text-align: left;
+  text-transform: none;
+  overflow: auto;
+}
+
+/* line 428, ../sass/style.scss */
+.comment-time {
+  font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  display: block;
+  text-align: left;
+  color: #666;
+}
+
+/* SCSS FOR THE NUMBER OF COMMENTS */
+/* line 438, ../sass/style.scss */
+.comment-number {
+  font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #333;
+  border-radius: 1rem;
+  padding: 0.75rem;
+}
+
+/* line 447, ../sass/style.scss */
+.sign-in-to-comment {
+  font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  color: #333;
+}
+
+/* LOGIN PAGE SCSS */
+/* line 455, ../sass/style.scss */
+.login-page {
+  margin-top: 5rem;
+}
+
+/* line 459, ../sass/style.scss */
+.login-page-logo-area {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/* line 464, ../sass/style.scss */
+.login-page input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #333;
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+/* line 474, ../sass/style.scss */
+.login-page input {
+  margin-top: 2.5rem;
+}
+
+/* line 478, ../sass/style.scss */
+.login-page label {
+  background-color: #ecf0f1;
+  color: #222;
+  font-size: 2rem;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  font-weight: 100;
+}
+
+/* line 488, ../sass/style.scss */
+.login-page-button input {
+  display: inline-block;
+  border-radius: 10px;
+  background-color: #ecf0f1;
+  font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  border: none;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.3rem;
+  font-size: 3rem;
+  font-weight: 400;
+  padding: 1.5rem;
+  color: #333;
+  text-align: center;
+  transition: 0.25s all;
+}
+
+/* line 503, ../sass/style.scss */
+.login-page-button input:hover {
+  background-color: #333;
+  color: #ecf0f1;
+  transition: 0.25s all;
+}
+
+/* line 509, ../sass/style.scss */
+.login-page-button {
+  text-align: center;
+}
+
+/* END LOGIN PAGE SCSS */
+/* DEVISE LINKS SCSS */
+/* line 520, ../sass/style.scss */
+span.devise-links {
+  font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #333;
+  display: inline-block;
+  text-align: center;
+}
+
+/* line 530, ../sass/style.scss */
+#user_info {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: #ccc;
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  padding: 1.5rem 0 1.5rem 0;
+  text-align: center;
+}
+
+/* line 541, ../sass/style.scss */
+#user_info a {
+  color: #3498db;
+  border: 1px solid #dedede;
+  border-radius: 0.3rem;
+  padding: 0.6rem;
+  transition: .4s all;
+}
+
+/* line 549, ../sass/style.scss */
+#user_info a:hover {
+  color: #333;
+  border: 1px solid #333;
+  transition: .4s all;
+  text-decoration: none;
+}
+
+/* line 556, ../sass/style.scss */
+.login-btn:before {
+  font-family: 'FontAwesome';
+  font-size: 5rem;
+  color: #333;
+  padding: 0 0 0 0.5rem;
+  content: "\f090";
+}
+
+/* */
+/* line 571, ../sass/style.scss */
+textarea:focus, input:focus {
+  outline: 0;
+}
+
+/* line 575, ../sass/style.scss */
+.form-field {
+  margin-top: 1rem;
+}
+
+/* line 579, ../sass/style.scss */
+.form-field label {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  background-color: #666;
+  color: #fff;
+  padding: 5px;
+  letter-spacing: 0.15rem;
+}
+
+/* line 590, ../sass/style.scss */
+.form-field label:focus, .form-field input:focus {
+  text-transform: none;
+}
+
+/* line 594, ../sass/style.scss */
+.post-title-field input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #333;
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* line 604, ../sass/style.scss */
+.post-title-area textarea {
+  width: 100%;
+  border: 1px solid 333;
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* line 612, ../sass/style.scss */
+.rad-textarea textarea {
+  margin: 1rem 0 1rem 0;
+  width: 100%;
+  height: 120px;
+  border: 3px solid #cccccc;
+  padding: 5px;
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  word-spacing: 0.16rem;
+  background-image: url(http://i.imgur.com/RcrYiFC.png);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+
+/* line 626, ../sass/style.scss */
+.submit-post-button {
+  text-align: center;
+  margin: 2rem 0 2rem 0;
+}
+
+/* line 631, ../sass/style.scss */
+.submit-post-button input {
+  display: inline-block;
+  background-color: #f65d5d;
+  color: #333;
+  padding: 0.7rem;
+  font-family: "Montserrat", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.35rem;
+  font-size: 7rem;
+  border: none;
+  text-transform: uppercase;
+  margin-top: 1rem 0 1rem 0;
+  transition: .25s all;
+}
+
+/* line 646, ../sass/style.scss */
+.submit-post-button input:hover {
+  background-color: #ccc;
+  color: #333;
+  transition: .25s all;
+}
+
+/* LG MD SM XS MEDIA QUERIES  FOR SUBMIT POST BUTTON INPUT */
+@media (min-width: 1200px) {
+  /* line 655, ../sass/style.scss */
+  .submit-post-button input {
+    font-size: 8.5rem;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* line 658, ../sass/style.scss */
+  .submit-post-button input {
+    font-size: 6.5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /* line 661, ../sass/style.scss */
+  .submit-post-button input {
+    font-size: 4.5rem;
+  }
+}
+@media (max-width: 767px) {
+  /* line 664, ../sass/style.scss */
+  .submit-post-button input {
+    font-size: 4rem;
+  }
+}
+/* category name scss */
+/* line 671, ../sass/style.scss */
+.post-category {
+  display: inline-block;
+}
+
+/* line 675, ../sass/style.scss */
+.category-name {
+  display: inline-block;
+  padding: 1rem;
+}
+
+/* line 680, ../sass/style.scss */
+.category-name label {
+  display: inline-block;
+}
+
+/* line 684, ../sass/style.scss */
+.category-name input {
+  display: inline-block;
+}
+
+/* index posts scss */
+/* line 690, ../sass/style.scss */
+.index-writing {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+}
+
+/* line 695, ../sass/style.scss */
+.index-writing p {
+  font-family: "Roboto", Helvetica "Neue", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  clear: both;
+}
