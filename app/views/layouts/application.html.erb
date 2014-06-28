@@ -29,7 +29,7 @@
 
 					
 					<h2><a href="http://radcircle.com/about/">About</a></h2>
-					<h2><a href="http://radcircle.com/team.php">Team</a></h2>	
+          <h2><%= link_to "Team", team_path %></h2>
 
 						<% if user_signed_in? %>
 							<h2 class="create-nav-btn"><%= link_to 'Create', new_post_path %></h2>
