@@ -6,7 +6,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'paperclip', '~> 4.1.1'
 gem 'devise'
 
-gem 'unicorn'
+#gem 'unicorn'
 
 # Assets
 gem 'jquery-rails'
@@ -36,10 +36,10 @@ end
 # This is a bad idea, you should use the same database in production as you do 
 # in development. There are quirks/features that may be tied to specific databases
 # down the track - making debugging issues a shitstorm.
-group :production do
-  gem 'therubyracer'
-  gem 'mysql2'
-end
+#group :production do
+ # gem 'therubyracer'
+  #gem 'mysql2'
+#end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
