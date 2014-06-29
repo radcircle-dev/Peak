@@ -9,6 +9,7 @@ gem 'devise'
 #gem 'unicorn'
 
 # Assets
+gem 'slim' # Alternate templating language
 gem 'jquery-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'sass-rails', '~> 4.0.3'
