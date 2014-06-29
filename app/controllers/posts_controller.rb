@@ -10,6 +10,7 @@ class PostsController < ApplicationController
     else
       @posts = Post.order("created_at DESC")
     end
+    
   end
 
   def new

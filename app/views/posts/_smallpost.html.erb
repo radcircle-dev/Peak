@@ -11,10 +11,14 @@
   
     <img src=<%=p.author %>>
     <h4> <%= p.subtitle %> </h4>
-
+    <% if user_signed_in? %>
+      <%= if currentid === p.user_id %>
+        <%= link_to "Edit", edit_post_path(p) %>
+        <%end%>
+    <%end%>
+    
       <% if admin_signed_in? %>
         <%= p.created_at %>
-        <%= link_to "Edit", edit_post_path(p) %>
         <%= link_to 'Destroy', post_path(p), method: :delete, data: { confirm: 'Are you sure?' }%> 
       <%end%>
   </h3>

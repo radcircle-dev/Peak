@@ -9,7 +9,7 @@
  
   <% @basecamps.each do |b| %>
     <tr>
-      <td><%= b.text %></td>
+      <td><%= b.created_at%>:  <%= b.text %>  </td></br>
     </tr>
   <% end %>
 </table>
