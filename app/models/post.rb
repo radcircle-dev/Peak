@@ -2,10 +2,11 @@ class Post < ActiveRecord::Base
 	validates :title, presence: true
 	validates :body, presence: true
     
-  has_many :terms
-  has_many :categories, :through => :terms
-  has_many :comments
-  belongs_to :user
+  
+  	has_many :comments
+  	belongs_to :user
+  	belongs_to :relative
+
 
 	def to_s
 		"#{title}"

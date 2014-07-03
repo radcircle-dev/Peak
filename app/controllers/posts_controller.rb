@@ -24,14 +24,27 @@ class PostsController < ApplicationController
   end
 
   def create
+
   	@post = Post.new(post_params)
     @post.user = current_user
 
-  	if @post.save
-  		redirect_to @post
-  	else
-  		render 'new'
-  	end
+    respond_to do |format|
+      if @post.save
+        
+        format.html { redirect_to @post, notice: 'Post was created' }
+        format.js   {}
+        format.json { render json: @post, status: :created, location: @song }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+
+  	#if @post.save
+  	#	redirect_to @post
+  	#else
+  	#	render 'new'
+  	#end
     
   end
 
@@ -58,7 +71,7 @@ class PostsController < ApplicationController
 
   private
   	def post_params
-  		params.require(:post).permit(:title, :subtitle, :body, :link, :artist, :song, :author, :category_ids => [])
+  		params.require(:post).permit(:title, :subtitle, :body, :link, :artist, :author, :song_id)
   	end
 
     after_filter :set_access_control_headers

@@ -1,0 +1,32 @@
+<h1> Songs#index </h1>
+
+
+
+<div class="row posts-index">
+		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- left side -->
+			<div class="col-xs-12 col-md-8">
+				<% @songs.each do |s| %>
+						<div class="date-container">
+    						<div class="day-name"> <%= s.created_at.strftime("%a") %> </div>
+    						<div class="month-name"> <%= s.created_at.strftime("%b") %> </div>
+    						<div class="day-number"> <%= s.created_at.strftime("%e") %> </div>
+  						</div>
+
+					<h3 class="index-writing">
+  					<%= s.title%> -- "<%= s.artistn %>"
+  					<%= link_to 'Destroy', song_path(s), method: :delete, data: { confirm: 'Are you sure?' }%>
+  					<% if admin_signed_in? %>
+        				<%= s.created_at %>
+        				<%= link_to "Edit", edit_song_path(s) %>
+        				
+    			   	<% elsif user_signed_in? %>
+     					<% if s.user_id === current_user %>
+         					<%= link_to "Edit", edit_song_path(s) %>
+        				<%end%>
+       
+    				<%end%>
+        				
+  	</h3>
+  	<%end%>
+  	
+</div></div>

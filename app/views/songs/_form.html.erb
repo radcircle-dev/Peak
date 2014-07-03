@@ -1,0 +1,18 @@
+
+<%= form_for @song do |f| %>
+
+	<div class="row">
+   <div class="col-xs-12 col-md-1 hidden-xs"></div> <!-- left side -->
+    <div class="col-xs-12 col-md-10 post-title-field form-field">
+     <label class="post-category"> Category: </label>
+     <label class="category-name"><%= f.collection_check_boxes(:category_ids, Category.all, :id, :title)%></label>
+    </div>
+    <div class="col-xs-12 col-md-1 hidden-xs"></div> <!-- right side -->
+  </div>
+
+
+	<div class="song-field"><%= f.text_field :title, placeholder: "Song" %></div>
+	<div class="song-field"><%= f.text_field :artistn, placeholder: "Artist"%> </div>
+	<div class="song-field"><%= f.text_field :link, placeholder: "Embed"%> </div>
+	<div class="song-box-submit-btn"><%= submit_tag 'Add Song' %> </div>
+<% end %>

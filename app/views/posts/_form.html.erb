@@ -1,16 +1,9 @@
 <%= form_for @post do |f| %>
 
-  <div class="row">
-   <div class="col-xs-12 col-md-1 hidden-xs"></div> <!-- left side -->
-    <div class="col-xs-12 col-md-10 post-title-field form-field"> 
-     <label class="post-category"> Category: </label>
-     <label class="category-name"><%= f.collection_check_boxes(:category_ids, Category.all, :id, :title)%></label>
-    </div>
-    <div class="col-xs-12 col-md-1 hidden-xs"></div> <!-- right side -->
-  </div>
+  
 
   <div class="row">
-    <div class="col-xs-12 col-md-10 col-md-offset-1 post-title-field form-field"> 
+    <div class="col-xs-12 col-md-10 col-md-offset-1 post-title-field form-field">
     <p>
       <%= f.label :title %><br>
       <%= f.text_field :title, placeholder: 'Awesome title here' %>
@@ -19,7 +12,7 @@
   </div>
 
   <div class="row">
-    <div class="col-xs-12 col-md-10 col-md-offset-1 post-title-field form-field"> 
+    <div class="col-xs-12 col-md-10 col-md-offset-1 post-title-field form-field">
     <p>
       <%= f.label :subtitle %><br>
       <%= f.text_field :subtitle, placeholder: 'Great subtitle here' %>
@@ -29,7 +22,7 @@
  
 
    <div class="row">
-    <div class="col-xs-12 col-md-10 col-md-offset-1 rad-textarea form-field"> 
+    <div class="col-xs-12 col-md-10 col-md-offset-1 rad-textarea form-field">
     <p>
       <%= f.label :body %><br>
       <%= f.text_area :body %>
@@ -38,7 +31,7 @@
     </div>
 
    <div class="row">
-    <div class="col-xs-12 col-md-10 col-md-offset-1 post-title-field form-field"> 
+    <div class="col-xs-12 col-md-10 col-md-offset-1 post-title-field form-field">
     <p>
       <%= f.label :embed %><br>
       <%= f.text_field :link, placeholder: 'Embed code here' %>
@@ -47,35 +40,26 @@
     </div>
 
     <div class="row">
-      <div class="col-xs-12 col-md-10 col-md-offset-1 post-title-field form-field"> 
+      <div class="col-xs-12 col-md-10 col-md-offset-1 post-title-field form-field">
     <p>
       <%= f.label :artist %><br>
-      <%= f.text_field :artist, placeholder: 'Artist name goes here'  %>
+      <%= f.text_field :artist, placeholder: 'Artist name goes here' %>
     </p>
        </div>
   </div>
 
-  <div class="row">
-      <div class="col-xs-12 col-md-10 col-md-offset-1 post-title-field form-field"> 
-   <p>
-      <%= f.label :song %><br>
-      <%= f.text_field :song, placeholder: 'song field?'  %>
-    </p>
-       </div>
-    </div>
-
     <div class="row">
-      <div class="col-xs-12 col-md-10 col-md-offset-1 post-title-field form-field"> 
+      <div class="col-xs-12 col-md-10 col-md-offset-1 post-title-field form-field">
    <p>
       <%= f.label :image %><br>
-      <%= f.text_field :author, placeholder: 'Link to Image'  %>  <!-- NEEDS TO BE FIXED [as of 0.1.1] -->
+      <%= f.text_field :author, placeholder: 'Link to Image' %> <!-- NEEDS TO BE FIXED [as of 0.1.1] -->
     </p>
        </div>
     </div>
 
     <div class="row">
     <div class="col-xs-12 col-md-1"></div> <!-- left side -->
-      <div class="col-xs-12 col-md-10 submit-post-button"> 
+      <div class="col-xs-12 col-md-10 submit-post-button">
     <p>
       <%= f.submit %>
     </p>

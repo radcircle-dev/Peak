@@ -13,8 +13,9 @@ Rails.application.routes.draw do
   resources :categories
   resources :comments
   resources :basecamps
+  resources :songs
 
-  root "posts#index"
+  root "songs#index"
 
   # Dashboard
   get 'dashboard' => 'dashboard#index'
