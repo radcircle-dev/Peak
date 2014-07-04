@@ -23,7 +23,7 @@ group :development do
   gem 'capistrano-bundler', '~> 1.1.2'
   gem 'capistrano-rails', '~> 1.1.1'
   gem 'capistrano3-unicorn', require: false
-# gem 'capistrano-rbenv', github: "capistrano/rbenv"
+  gem 'capistrano-rbenv', github: "capistrano/rbenv"
 end
 
 group :development, :test do
