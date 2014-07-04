@@ -7,6 +7,7 @@ gem 'paperclip', '~> 4.1.1'
 gem 'devise'
 
 gem 'unicorn'
+  gem 'pg'
 
 # Assets
 gem 'slim' # Alternate templating language
@@ -18,7 +19,6 @@ gem 'turbolinks'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development do
-  gem 'sqlite3' # Change this asap. Reason to not use postgres?
   gem 'capistrano', '~> 3.1.0'
   gem 'capistrano-bundler', '~> 1.1.2'
   gem 'capistrano-rails', '~> 1.1.1'
@@ -40,7 +40,6 @@ end
 # down the track - making debugging issues a shitstorm.
 group :production do
   gem 'therubyracer'
-  gem 'pg'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
