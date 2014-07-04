@@ -3,8 +3,8 @@ timeout 15
 preload_app true
 
 if ENV["RAILS_ENV"] == "production"
-  pid "/home/rails/radcircle/shared/tmp/pids/unicorn.pid"
-  listen "#/home/rails/radcircle/shared/tmp/sockets/unicorn.sock", :backlog => 64
+  pid "/home/rails/apps/radcircle/shared/tmp/pids/unicorn.pid"
+  listen "#/home/rails/apps/radcircle/shared/tmp/sockets/unicorn.sock", :backlog => 64
 end
 
 before_fork do |server, worker|
