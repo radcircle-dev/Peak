@@ -4,7 +4,9 @@ preload_app true
 
 if ENV["RAILS_ENV"] == "production"
   pid "/home/rails/apps/radcircle/shared/tmp/pids/unicorn.pid"
-  listen "#/home/rails/apps/radcircle/shared/tmp/sockets/unicorn.sock", :backlog => 64
+  listen "/home/rails/apps/radcircle/shared/tmp/sockets/unicorn.sock", :backlog => 64
+  stderr_path "/home/rails/apps/radcircle/current/log/unicorn.stderr.log"
+  stdout_path "/home/rails/apps/radcircle/current/log/unicorn.stdout.log"
 end
 
 before_fork do |server, worker|
