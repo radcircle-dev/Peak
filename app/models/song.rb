@@ -4,6 +4,8 @@ class Song < ActiveRecord::Base
 	has_one :relative
 	has_one :post, :through => :relative
 
+	has_many :comments
+
 	has_many :terms
 	has_many :categories, :through => :terms
 

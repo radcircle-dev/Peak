@@ -2,7 +2,7 @@ class CommentsController < ApplicationController
 	before_filter :authenticate_user!
 
 	def create 
-		@comment = Comment.new(params[:comment].permit(:content, :post_id))
+		@comment = Comment.new(params[:comment].permit(:content, :song_id))
 		@comment.user = current_user
 		respond_to do |format|
 			if @comment.save
