@@ -5,6 +5,19 @@ __This section should contain the purpose / intent of Radcircle Peak__
 
 ## Development Notes
 
+### Contributing
+In order to ensure the quality of code going into Radcircle Peak is top-notch & in
+order to get into best-practice mode, all commits to this repository should be 
+made in a feature branch so code can be reviewed before it is committed to master.
+
+Please see: https://www.atlassian.com/git/workflows#!workflow-feature-branch
+
+As a sidenote: Don't commit your own commits to master as it defeats the purpose - 
+unless that is there are no issues raised within 2 days of you submitting a pull
+request.
+
+Any questions - see Paul.
+
 ### 5/25/14 - AUSTIN
 - Installed devise- have not done anything with it yet
 - Created a basic blogging system
