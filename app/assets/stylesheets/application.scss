@@ -307,7 +307,7 @@ span.new-post {
 /* SHOW => POST PAGE SCSS */
 
 
-.underbar {
+.underbar, .underbar-thin {
 	height: 0.5rem;
 	background: #ea2e49; /* Old browsers */
 	background: -moz-linear-gradient(left,  #ea2e49 0%, #77c4d3 50%, #f6f792 100%); /* FF3.6+ */
@@ -318,6 +318,10 @@ span.new-post {
 	background: linear-gradient(to right,  #ea2e49 0%,#77c4d3 50%,#f6f792 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea2e49', endColorstr='#f6f792',GradientType=1 ); /* IE6-9 */
 }
+
+	.underbar-thin {
+		height: 0.25rem;
+	}
 
 .post-image {
 	text-align: center;
@@ -375,6 +379,10 @@ span.new-post {
 	@extend .text-render;
 }
 
+.post-body {
+	padding: 0.5rem 0 1rem 0;
+}
+
 .post-body p {
 	font-family: 'Vollkorn', serif;
 	font-weight: 400;
@@ -387,6 +395,7 @@ span.new-post {
 
 .post-body p:first-letter { 
 	float: left; 
+	text-transform: uppercase;
 	color: #333; 
 	font-size: 75px; 
 	line-height: 60px; 
@@ -477,6 +486,7 @@ p:first-child:first-letter {
 	display: block;
 	text-align: left;
 	color: #666;
+	padding: 0 0 1rem 0;
 }
 
 /* SCSS FOR THE NUMBER OF COMMENTS */
