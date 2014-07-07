@@ -1,9 +1,10 @@
 class Song < ActiveRecord::Base
-	has_many :terms
-	belongs_to :users
-	#has_one :relative
-	#has_one :post, :through => :relative
+	validates :title, presence: true
+	validates :artistn, presence: true
+	validates :desc, presence: true
+	validates :link, presence: true
 
+	belongs_to :users
 	has_many :comments, dependent: :destroy
 	has_many :posts
 	has_many :terms

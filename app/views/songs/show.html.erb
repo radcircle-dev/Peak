@@ -12,10 +12,11 @@
 <%= raw(@song.link)%>
 <div class="row">
 			<div class="col-xs-12 col-md-6 col-md-offset-3 post-songtitle-songartist">
-				<span><%if @song.posts.size < 1 %>
-			<%= @song.desc%>
-	<%end%>
-</span> 
+				<span>
+					<%if @song.posts.size < 1 %>
+						<%= @song.desc%>
+					<%end%>
+				</span> 
 			</div>
 	</div>	
 
