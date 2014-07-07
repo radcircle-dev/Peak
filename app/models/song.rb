@@ -13,5 +13,16 @@ class Song < ActiveRecord::Base
 		title
 	end
 
+	def self.search(query)
+		where("title like ?", "%#{query}%")
+	end
+
+	def to_param
+		"#{id}-#{slug}"
+	end
+
+	def slug
+		title.downcase.gsub(" ", "-")
+	end
 
 end

@@ -3,7 +3,11 @@ class SongsController < ApplicationController
 
 	def index
 		@songs = Song.all
-		@songs = Song.order("created_at DESC")
+		 if params[:search]
+      		@songs = Song.search(params[:search]).order("created_at DESC")
+    	else
+      		@songs = Song.order("created_at DESC")
+    	end
 	end
 
 	def new
@@ -53,6 +57,6 @@ class SongsController < ApplicationController
 
 	private
 	def song_params
-		params.require(:song).permit(:title, :artistn, :link, :user_id, :category_ids => [])
+		params.require(:song).permit(:title, :artistn, :link, :desc, :user_id, :category_ids => [])
 	end
 end

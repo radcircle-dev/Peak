@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140707133624) do
+ActiveRecord::Schema.define(version: 20140707151636) do
 
   create_table "admins", force: true do |t|
     t.string   "first_name"
@@ -81,6 +81,7 @@ ActiveRecord::Schema.define(version: 20140707133624) do
     t.string   "link"
     t.string   "artistn"
     t.integer  "user_id"
+    t.string   "desc"
   end
 
   create_table "terms", force: true do |t|

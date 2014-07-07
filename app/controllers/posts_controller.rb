@@ -2,37 +2,14 @@ class PostsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
   require 'json'
 
-  def index 
-  	@posts = Post.all
-    if params[:search]
-      @posts = Post.search(params[:search]).order("created_at DESC")
-    else
-      @posts = Post.order("created_at DESC")
-    end
-    
-  end
 
-  def new
-    	@post = Post.new
-  end
 
-  def show
-  	@post = Post.find(params[:id])
-    
-  end
 
   def create
     @song = Song.find(params[:song_id])
   	@post  = @song.posts.create(params[:post].permit(:title, :subtitle, :body, :link, :image_link))
     @post.user = current_user
     redirect_to song_path(@song)
-  
-  	#if @post.save
-  	#	redirect_to @post
-  	#else
-  	#	render 'new'
-  	#end
-    
   end
 
   def destroy
@@ -43,7 +20,9 @@ class PostsController < ApplicationController
   end
 
   def edit
-  	@post = Post.find(params[:id])
+    @song = Song.find(params[:song_id])
+    @post = @song.posts.edit(params)
+  	#@post = Post.find(params[:id])
   end
 
   def update
