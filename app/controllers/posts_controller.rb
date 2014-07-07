@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   before_filter :authenticate_user!, except: [:index, :show]
   require 'json'
 
-
   def index 
   	@posts = Post.all
     if params[:search]
@@ -23,16 +22,16 @@ class PostsController < ApplicationController
   end
 
   def create
-
-  	@post = Post.new(post_params)
+    @song = Song.find(params[:song_id])
+  	@post  = @song.posts.create(params[:post].permit(:title, :subtitle, :body, :link, :image_link))
     @post.user = current_user
-
+    redirect_to song_path(@song)
   
-  	if @post.save
-  		redirect_to @post
-  	else
-  		render 'new'
-  	end
+  	#if @post.save
+  	#	redirect_to @post
+  	#else
+  	#	render 'new'
+  	#end
     
   end
 
@@ -59,7 +58,7 @@ class PostsController < ApplicationController
 
   private
   	def post_params
-  		params.require(:post).permit(:title, :subtitle, :body, :link, :artist, :author, :song_id)
+  		params.require(:post).permit(:title, :subtitle, :body, :link, :artist, :author)
   	end
 
     after_filter :set_access_control_headers

@@ -9,11 +9,13 @@ Rails.application.routes.draw do
   #get "posts/show"
 
   devise_for :admins
-  resources :posts
   resources :categories
   resources :comments
   resources :basecamps
-  resources :songs
+  resources :songs do
+    resources :posts
+    
+  end
 
   root "songs#index"
 

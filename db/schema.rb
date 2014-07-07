@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140706160645) do
+ActiveRecord::Schema.define(version: 20140707133624) do
 
   create_table "admins", force: true do |t|
     t.string   "first_name"
@@ -56,17 +56,15 @@ ActiveRecord::Schema.define(version: 20140706160645) do
   end
 
   create_table "posts", force: true do |t|
-    t.string   "form"
-    t.string   "author"
     t.string   "title"
     t.string   "subtitle"
     t.text     "body"
     t.text     "link"
-    t.string   "artist"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.string   "songname"
+    t.integer  "song_id"
+    t.string   "image_link"
   end
 
   create_table "relatives", force: true do |t|

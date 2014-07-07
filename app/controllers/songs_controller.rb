@@ -25,6 +25,9 @@ class SongsController < ApplicationController
 		@song = Song.find(params[:id])
 		@comment = Comment.new
     	@comment.song = @song
+    	@post = Post.new
+    	@post.song = @song
+    	
 	end
 
 	def edit

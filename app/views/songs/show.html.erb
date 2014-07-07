@@ -6,13 +6,25 @@
 <%= raw(@song.link)%>
 </h2>
 </div>
-
+<div class="row">
+			<div class="col-xs-12 col-md-6 col-md-offset-3 post-songtitle-songartist">
+				<span><%=@song.artistn%></span> <span><%=@song.title%></span>
+			</div>
+	</div>	
 
 <h1> Wanna review this song for yourself? go ahead! </h1>
+
+<div class = "row posts">
+	<%= render partial: "posts/post", collection: @song.posts.order('created_at desc') %>
+	<%= render partial: "posts/form" %>
+
+</div>
+
+
 <div class="row posts">
 	<div class="col-xs-12 col-md-6 col-md-offset-3">
 
-<section class ="posts">
+<section class ="comments">
 	<h2> <i class="fa fa-comments-o fa-2x"></i> Comments: <span class="comment-number"><%= @song.comments.size %></span></h2>
 	<%if user_signed_in? %>
 		<%= render 'comments/form'%>

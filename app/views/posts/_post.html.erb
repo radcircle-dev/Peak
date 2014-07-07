@@ -1,4 +1,57 @@
 <article class="post">
-  <h2><%= link_to post, post %></h2>
+  
   <p><%= post.subtitle %></p>
+
+
+<div class="row fill">
+	<div class="col-xs-12 col-md-12 post-image fill">
+				<img src=<%=post.image_link %>>
+	</div>
+	</div>
+
+	
+
+	<div class="row">
+		<div class="col-xs-12 col-md-12">
+
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- left side -->
+			<div class="col-xs-12 col-md-8 post-title">
+				<%= post.title %>
+			</div>
+		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- right side -->
+	</div>
+
+	<div class="row">
+	<div class="col-xs-12 col-md-12 underbar">
+
+	</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- left side -->
+			<div class="col-xs-12 col-md-6 post-author">
+				
+			</div>
+		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- right side -->
+	</div>
+ 
+ 	<div class="row">
+		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- left side -->
+			<div class="col-xs-12 col-md-8 post-subtitle">
+				<%= post.subtitle %> 
+			</div>
+		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- right side -->
+	</div>
+
+ 	<div class="row">
+		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- left side -->
+			<div class="col-xs-12 col-md-6 post-body">
+				<p><%= simple_format post.body %></p>
+			</div>
+		<div class="col-xs-12 col-md-3 hidden-xs"></div> <!-- right side -->
+	</div>
 </article>

@@ -16,4 +16,14 @@ class CommentsController < ApplicationController
 			end
 		end
 	end
+
+	def destroy
+		@song = Song.find(params[:song_id])
+    	@comment = @song.comments.find(params[:id])
+    	@comment.destroy
+    	redirect_to song_path(@song)
+	end
+
+	
+
 end

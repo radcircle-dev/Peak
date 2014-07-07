@@ -5,8 +5,8 @@ class Post < ActiveRecord::Base
   
   	
   	belongs_to :user
-  	belongs_to :relative
-
+  	belongs_to :song
+  	has_many :posts
 
 	def to_s
 		"#{title}"
