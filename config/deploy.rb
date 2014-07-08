@@ -49,7 +49,7 @@ namespace :assets do
         with rails_env: fetch(:stage) do
           execute :bundle, "exec rake assets:precompile"
         end
-        execute "rsync -av --delete ./public/assets/ #{fetch(:user)}@#{rsync_host}:#{shared_path}/public/assets/"
+        execute "rsync -av --delete ./public/assets/ rails@#{rsync_host}:#{shared_path}/public/assets/"
         execute "rm -rf public/assets"
         # execute "rm -rf tmp/cache/assets" # in case you are not seeing changes
       end
