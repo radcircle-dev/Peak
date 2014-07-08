@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   devise_for :admins
   resources :categories
   resources :comments
+  resources :features
   resources :basecamps
   resources :songs do
     resources :posts

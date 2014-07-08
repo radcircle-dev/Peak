@@ -1,0 +1,21 @@
+<h1> Feature#index </h1>
+
+
+
+<div class="row posts-index">
+		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- left side -->
+			<div class="col-xs-12 col-md-8">
+				<% @features.each do |s| %>
+						<div class="date-container">
+    						<div class="day-name"> <%= s.created_at.strftime("%a") %> </div>
+    						<div class="month-name"> <%= s.created_at.strftime("%b") %> </div>
+    						<div class="day-number"> <%= s.created_at.strftime("%e") %> </div>
+  						</div>
+
+					<h3 class="index-writing">
+            <%= link_to s, feature_path(s) %>
+
+           </h3>
+  	<%end%>
+  	
+</div></div>

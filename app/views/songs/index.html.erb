@@ -13,7 +13,10 @@
   						</div>
 
 					<h3 class="index-writing">
-  					<%= s.title%> -- "<%= s.artistn %>" <%= link_to 'Show', song_path(s)%>
+  					<%= s.title%> -- "<%= s.artistn %>" <%= link_to 'Show', song_path(s)%></br>
+            <h2><%= author_(s)%></h2>
+            <h2><%= song_posting(s)%> </h2>
+            
   					<%= link_to 'Destroy', song_path(s), method: :delete, data: { confirm: 'Are you sure?' }%>
   					<% if admin_signed_in? %>
         				<%= s.created_at %>

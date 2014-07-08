@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   has_many :posts
   has_many :comments
   has_many :songs
+  has_many :features
 
   validates :prname, presence: true
   validates :email, presence: true

@@ -4,7 +4,7 @@ class Song < ActiveRecord::Base
 	validates :desc, presence: true
 	validates :link, presence: true
 
-	belongs_to :users
+	belongs_to :user
 	has_many :comments, dependent: :destroy
 	has_many :posts
 	has_many :terms
