@@ -40,6 +40,22 @@ set :unicorn_pid, "#{deploy_to}/shared/tmp/pids/unicorn.pid"
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+namespace :assets do
+  desc "Precompile assets locally and then rsync to web servers"
+  task :precompile do
+    on roles(:web) do
+      rsync_host = host.to_s # this needs to be done outside run_locally in order for host to exist
+      run_locally do
+        with rails_env: fetch(:stage) do
+          execute :bundle, "exec rake assets:precompile"
+        end
+        execute "rsync -av --delete ./public/assets/ #{fetch(:user)}@#{rsync_host}:#{shared_path}/public/assets/"
+        execute "rm -rf public/assets"
+        # execute "rm -rf tmp/cache/assets" # in case you are not seeing changes
+      end
+    end
+  end
+end
 
 namespace :deploy do
   after :publishing, :restart
@@ -66,21 +82,6 @@ namespace :deploy do
   end
 
   after :finishing, 'deploy:cleanup'
+
 end
 
-namespace :assets do
-  desc "Precompile assets locally and then rsync to web servers"
-  task :precompile do
-    on roles(:web) do
-      rsync_host = host.to_s # this needs to be done outside run_locally in order for host to exist
-      run_locally do
-        with rails_env: fetch(:stage) do
-          execute :bundle, "exec rake assets:precompile"
-        end
-        execute "rsync -av --delete ./public/assets/ #{fetch(:user)}@#{rsync_host}:#{shared_path}/public/assets/"
-        execute "rm -rf public/assets"
-        # execute "rm -rf tmp/cache/assets" # in case you are not seeing changes
-      end
-    end
-  end
-end
