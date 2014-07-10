@@ -36,8 +36,15 @@
 							<h2 class="edit-nav-btn"><%= link_to 'Edit Account', edit_user_registration_path %></h2>
 							<h2 class="logout-nav-btn"><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></h2>
 						<% else %>
-							<h2 class="login-nav-btn"><%= link_to 'Login', new_user_session_path %></h2>
-							<h2 class="signup-nav-btn"><%= link_to 'Sign Up', new_user_registration_path %></h2>
+
+              <% if feature? :sign_in %>
+                <h2 class="login-nav-btn"><%= link_to 'Login', new_user_session_path %></h2>
+              <% end %>
+
+              <% if feature? :sign_up %>
+                <h2 class="signup-nav-btn"><%= link_to 'Sign Up', new_user_registration_path %></h2>
+              <% end %>
+
 						<% end %>
 
 						<h2 class="feedback-nav-btn"><%= link_to 'Feedback', new_basecamp_path%></h2>

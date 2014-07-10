@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  
+
+  # Lock this down to admins.
+  mount Flip::Engine => "/flip"
 
   devise_for :users
   resources :users, :only => [:show]
