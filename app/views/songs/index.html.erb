@@ -1,7 +1,7 @@
 <h1> Songs#index </h1>
 
 
-
+ 
 <div class="row posts-index">
 		<div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- left side -->
 			<div class="col-xs-12 col-md-8">
@@ -12,10 +12,12 @@
     						<div class="day-number"> <%= s.created_at.strftime("%e") %> </div>
   						</div>
 
+          <% if s.posts.size > 0 %>
 					<h3 class="index-writing">
   					<%= s.title%> -- "<%= s.artistn %>" <%= link_to 'Show', song_path(s)%></br>
             <h2><%= author_(s)%></h2>
             <h2><%= song_posting(s)%> </h2>
+
             
   					<%= link_to 'Destroy', song_path(s), method: :delete, data: { confirm: 'Are you sure?' }%>
   					<% if admin_signed_in? %>
@@ -23,13 +25,26 @@
         				<%= link_to "Edit", edit_song_path(s) %>
         				
     			   	<% elsif user_signed_in? %>
-     					<% if s.user_id === current_user %>
+     					  <% if s.user_id === current_user %>
          					<%= link_to "Edit", edit_song_path(s) %>
         				<%end%>
        
     				<%end%>
-        				
-  	</h3>
+           
+
+            </h3>
+
+          <%end%>
+
+               				
+  	
   	<%end%>
+    <div class = "col-xs-12 col-md-8">
+      <% @songs.each do |s| %>
+        <% if s.posts.size < 1 %>
+            <h3 class = "index-writing"> QUICK HIT  <%= s.title%> -- "<%= s.artistn %>" <%= link_to 'Show', song_path(s)%> </br></h3>
+          <%end%>
+          <%end%>
+          </div>
   	
 </div></div>

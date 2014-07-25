@@ -12,10 +12,10 @@ class Post < ActiveRecord::Base
 		"#{title}"
 	end
 
-	def self.search(query)
-		where("title like ?", "%#{query}%")
+	def to_im
+		"#{image_link}"
 	end
-
+	
 	def to_param
 		"#{id}-#{slug}"
 	end

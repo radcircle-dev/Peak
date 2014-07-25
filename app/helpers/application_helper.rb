@@ -27,4 +27,7 @@ module ApplicationHelper
 		str += '</div><div class="col-xs-12 col-md-2 hidden-xs"></div> <!-- right side --></div></div>'
 		raw(str)
 	end
+
+	
+
 end
