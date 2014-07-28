@@ -1,6 +1,8 @@
 # config valid only for Capistrano 3.1
 lock '3.1.0'
 
+
+
 set :application, 'radcircle'
 set :repo_url, 'git@github.com:radcircle-dev/Peak.git'
 set :default_env, { path: "/usr/bin:~/.rbenv/shims:~/.rbenv/bin:$PATH" }
@@ -40,9 +42,12 @@ set :unicorn_pid, "#{deploy_to}/shared/tmp/pids/unicorn.pid"
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
-namespace :assets do
+
+Rake::Task["deploy:compile_assets"].clear 
+
+namespace :deploy do
   desc "Precompile assets locally and then rsync to web servers"
-  task :precompile do
+  task :compile_assets do
     on roles(:web) do
       rsync_host = host.to_s # this needs to be done outside run_locally in order for host to exist
       run_locally do
@@ -55,11 +60,8 @@ namespace :assets do
       end
     end
   end
-end
 
-namespace :deploy do
   after :publishing, :restart
-  after :updated, "assets:precompile"
 
   desc 'Restart application'
   task :restart do
