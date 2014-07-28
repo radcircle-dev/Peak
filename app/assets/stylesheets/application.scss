@@ -791,3 +791,37 @@ textarea:focus, input:focus{
 	font-size: 5rem;
 	color: #fff000;
 }
+
+
+/* DASHBOARD */
+
+.db-quicklinks {
+	background: #eee;
+}
+
+	.db-quicklinks p {
+		font-weight: $stdmont;
+		font-size: 2rem;
+		text-transform: uppercase;
+		letter-spacing: 0.2rem;
+		color: #222;
+		text-align: center;
+	}
+
+.db-block {
+	font-family: Helvetica 'Neue', Helvetica, Arial, sans-serif;
+	font-size: 4rem;
+	font-weight: bold;
+}
+
+.db-postnumber {
+	@include .db-block;
+	color: #333;
+	background-color: #ccc;
+}
+
+.db-facebook {
+	@include .db-block;
+	color: #222;
+	background-color: blue;
+}
