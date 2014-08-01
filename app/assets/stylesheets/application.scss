@@ -797,9 +797,12 @@ textarea:focus, input:focus{
 
 .db-quicklinks {
 	background: #eee;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 
 	.db-quicklinks p {
+		padding: 0.5rem;
 		font-weight: $stdmont;
 		font-size: 2rem;
 		text-transform: uppercase;
@@ -812,14 +815,68 @@ textarea:focus, input:focus{
 	font-family: Helvetica 'Neue', Helvetica, Arial, sans-serif;
 	font-size: 4rem;
 	font-weight: bold;
-	color: #333;
-	background-color: #ccc;
+	color: #222;
+	background-color: #fff;
 }
 
 .db-facebook {
 	font-family: Helvetica 'Neue', Helvetica, Arial, sans-serif;
 	font-size: 4rem;
+	text-align: center;
 	font-weight: bold;
 	color: #222;
-	background-color: blue;
+	background-color: #3b5998;
 }
+
+.db-twitter {
+	font-family: Helvetica 'Neue', Helvetica, Arial, sans-serif;
+	font-size: 4rem;
+	text-align: center;
+	font-weight: bold;
+	color: #222;
+	background-color: #55acee;
+}
+
+.db-soundcloud {
+	font-family: Helvetica 'Neue', Helvetica, Arial, sans-serif;
+	font-size: 4rem;
+	text-align: center;
+	font-weight: bold;
+	color: #222;
+	background-color: #f30;
+}
+
+.db-email {
+	font-family: Helvetica 'Neue', Helvetica, Arial, sans-serif;
+	font-size: 4rem;
+	text-align: center;
+	font-weight: bold;
+	color: #222;
+	background-color: #fff;
+}
+
+.db-instagram {
+	font-family: Helvetica 'Neue', Helvetica, Arial, sans-serif;
+	font-size: 4rem;
+	text-align: center;
+	font-weight: bold;
+	color: #222;
+	background-color: #3f729b;
+}
+
+.db-accounts {
+	font-family: Helvetica 'Neue', Helvetica, Arial, sans-serif;
+	font-size: 4rem;
+	text-align: center;
+	font-weight: bold;
+	color: #222;
+	background-color: #fff;
+}
+
+
+
+
+
+
+
+
